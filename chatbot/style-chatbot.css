@@ -1,0 +1,651 @@
+/* Estilos para el chatbot con soporte para modo claro/oscuro */
+:root {
+  --primary-color: #00addc;
+  --secondary-color: #72d54a;
+  --text-color: white;
+  --bg-color: #ffffff;
+  --user-msg-bg: #00addc;
+  --bot-msg-bg: #72d54a;
+  --header-gradient: linear-gradient(to right, #00addc, #72d54a);
+  --button-gradient: linear-gradient(to right, #00addc, #72d54a);
+  --input-text-color: #333;
+  --input-bg-color: #fff;
+  --input-border-color: #ddd;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #00addc;
+  --scrollbar-thumb-hover: #022169;
+  --border-color: #e0e0e0;
+  --quick-button-bg: rgba(0, 173, 220, 0.1);
+  --quick-button-hover: rgba(0, 173, 220, 0.2);
+  --tab-bg: #f8f9fa;
+  --tab-text: #333;
+
+  /* Nuevos colores para el test de instrumentos */
+  --test-gradient: linear-gradient(45deg, #8e44ad, #3498db);
+  --test-button-bg: rgba(142, 68, 173, 0.1);
+  --test-button-hover: rgba(142, 68, 173, 0.2);
+  --test-option-bg: rgba(142, 68, 173, 0.1);
+  --test-option-hover: rgba(142, 68, 173, 0.2);
+  --test-option-selected: rgba(142, 68, 173, 0.5);
+  --test-option-disabled: rgba(142, 68, 173, 0.05);
+}
+
+/* Modo oscuro */
+.dark-mode #chatbot-container {
+  --bg-color: #121212;
+  --text-color: white;
+  --user-msg-bg: #00addc;
+  --bot-msg-bg: #72d54a;
+  --input-text-color: #f0f0f0;
+  --input-bg-color: #2a2a2a;
+  --input-border-color: #444;
+  --scrollbar-track: #2a2a2a;
+  --scrollbar-thumb: #00addc;
+  --scrollbar-thumb-hover: #72d54a;
+  --border-color: #444;
+  --quick-button-bg: rgba(0, 173, 220, 0.2);
+  --quick-button-hover: rgba(0, 173, 220, 0.3);
+  --tab-bg: #2a2a2a;
+  --tab-text: #f0f0f0;
+
+  /* Nuevos colores para el test de instrumentos en modo oscuro */
+  --test-button-bg: rgba(142, 68, 173, 0.2);
+  --test-button-hover: rgba(142, 68, 173, 0.3);
+  --test-option-bg: rgba(142, 68, 173, 0.2);
+  --test-option-hover: rgba(142, 68, 173, 0.3);
+  --test-option-selected: rgba(142, 68, 173, 0.6);
+  --test-option-disabled: rgba(142, 68, 173, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: var(--bg-color);
+  height: 100%;
+  overflow: hidden;
+}
+
+#chatbot-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Estilos para la barra de encabezado - MEJORADO */
+.header {
+  display: flex;
+  align-items: center;
+  background: var(--header-gradient);
+  padding: 8px 12px; /* Reducido el padding */
+  color: var(--text-color);
+  min-height: 50px; /* Altura mínima fija */
+  flex-wrap: nowrap; /* Evitar que se envuelvan los elementos */
+}
+
+.profile-img {
+  width: 28px; /* Ligeramente más pequeño */
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 8px; /* Reducido el margen */
+  border: 2px solid white;
+  flex-shrink: 0; /* No se encoge */
+}
+
+.header-text {
+  flex-grow: 1;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 0.9em; /* Ligeramente más pequeño */
+  min-width: 0; /* Permite que se encoja si es necesario */
+  margin-right: 8px;
+}
+
+.close-button {
+  color: white;
+  font-size: 20px; /* Más pequeño */
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+  flex-shrink: 0; /* No se encoge */
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+}
+
+/* Contenedor del chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 50px); /* Ajustado para la nueva altura del header */
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Caja de mensajes */
+.chat-box {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para la pestaña desplegable */
+.quick-buttons-tab {
+  background-color: var(--bg-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.quick-buttons-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: var(--tab-bg);
+  color: var(--tab-text);
+  cursor: pointer;
+  border-top: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.quick-buttons-header:hover {
+  background-color: var(--quick-button-hover);
+}
+
+.tab-text {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.tab-arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.tab-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* Contenedor de botones rápidos */
+.quick-buttons-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--bg-color);
+}
+
+.quick-buttons-container.expanded {
+  max-height: 200px; /* Ajusta según necesites */
+}
+
+.quick-buttons-scroll {
+  display: flex;
+  gap: 8px;
+  padding: 10px 15px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.quick-buttons-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.quick-buttons-scroll::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 2px;
+}
+
+.quick-buttons-scroll::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+.quick-button {
+  background-color: var(--quick-button-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  min-width: fit-content;
+}
+
+.quick-button:hover {
+  background-color: var(--quick-button-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quick-button:active {
+  transform: translateY(0);
+}
+
+/* Estilos para los mensajes */
+.user-message,
+.bot-message {
+  max-width: 85%; /* Aumentado ligeramente para mejor uso del espacio */
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  animation: fadeIn 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-message {
+  background-color: var(--user-msg-bg);
+  color: var(--text-color);
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.bot-message {
+  background-color: var(--bot-msg-bg);
+  color: var(--text-color);
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para emojis en mensajes */
+.emoji {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+/* Contenedor de entrada */
+.input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 20px;
+  margin-right: 10px;
+  font-family: inherit;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  transition: all 0.3s ease;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 173, 220, 0.3);
+}
+
+#send-button {
+  background: var(--button-gradient);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#send-button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Estilos para los contenedores de iframe */
+.iframe-container {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de escritura */
+.typing-indicator {
+  display: flex;
+  padding: 10px 15px;
+  background-color: var(--bot-msg-bg);
+  border-radius: 18px;
+  margin-bottom: 10px;
+  width: fit-content;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+  opacity: 0.7;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation: bounce 1s infinite 0.1s;
+}
+.typing-indicator span:nth-child(2) {
+  animation: bounce 1s infinite 0.3s;
+}
+.typing-indicator span:nth-child(3) {
+  animation: bounce 1s infinite 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Corregir problemas de tamaño */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#chatbot-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+/* Estilos para el botón de trivia - MEJORADO CON ICONOS */
+.trivia-button {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular para iconos */
+  width: 36px; /* Tamaño fijo */
+  height: 36px; /* Tamaño fijo */
+  font-size: 1.2em; /* Tamaño del emoji */
+  cursor: pointer;
+  margin-right: 8px; /* Espaciado entre botones */
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* No se encoge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trivia-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.trivia-button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para mensajes de trivia */
+.trivia-question {
+  border-left: 4px solid #ff6b6b;
+  background: linear-gradient(135deg, var(--bot-msg-bg), #4ecdc4);
+  font-weight: 500;
+}
+
+.trivia-answer {
+  border-left: 4px solid #4ecdc4;
+  background: linear-gradient(135deg, var(--bot-msg-bg), #ff6b6b);
+  font-weight: 500;
+}
+
+.spinning-message {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilos para el botón del test de instrumentos - MEJORADO CON ICONOS */
+.instrumento-button {
+  background: var(--test-gradient);
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular para iconos */
+  width: 36px; /* Tamaño fijo */
+  height: 36px; /* Tamaño fijo */
+  font-size: 1.2em; /* Tamaño del emoji */
+  cursor: pointer;
+  margin-right: 8px; /* Espaciado entre botones */
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* No se encoge */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instrumento-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.instrumento-button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para el test de instrumentos */
+.test-intro {
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  border-left: 4px solid #8e44ad;
+  font-weight: 500;
+}
+
+.test-question {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  border-left: 4px solid #3498db;
+  font-weight: 500;
+}
+
+.test-result {
+  background: linear-gradient(135deg, #8e44ad, #3498db, #9b59b6);
+  border-left: 4px solid #9b59b6;
+  font-weight: 500;
+}
+
+.processing-message {
+  background: linear-gradient(45deg, #8e44ad, #3498db);
+  animation: pulse 1s infinite;
+}
+
+/* Contenedor de opciones del test - MEJORADO */
+.test-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0 15px 0;
+  width: 100%; /* Usar todo el ancho disponible */
+  max-width: none; /* Quitar limitación de ancho máximo */
+}
+
+/* Botones de opciones del test - MEJORADO */
+.test-option-button {
+  background-color: var(--test-option-bg);
+  color: #8e44ad;
+  border: 1px solid #8e44ad;
+  border-radius: 10px;
+  padding: 12px 15px; /* Más padding para mejor legibilidad */
+  font-size: 0.9em;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  width: 100%; /* Usar todo el ancho */
+  box-sizing: border-box; /* Incluir padding en el ancho */
+  word-wrap: break-word; /* Permitir que el texto se envuelva */
+  line-height: 1.3; /* Mejor espaciado de líneas */
+}
+
+.test-option-button:hover {
+  background-color: var(--test-option-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.test-option-button:active {
+  transform: translateY(0);
+}
+
+.test-option-button.selected {
+  background-color: var(--test-option-selected);
+  color: white;
+  font-weight: bold;
+}
+
+.test-option-button.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: var(--test-option-disabled);
+}
+
+/* Responsive para móviles - MEJORADO */
+@media (max-width: 768px) {
+  .header {
+    padding: 6px 8px; /* Aún más compacto en móviles */
+    min-height: 45px; /* Altura mínima más pequeña */
+  }
+
+  .header-text {
+    font-size: 0.8em; /* Más pequeño en móviles */
+  }
+
+  .profile-img {
+    width: 24px; /* Más pequeño en móviles */
+    height: 24px;
+    margin-right: 6px;
+  }
+
+  .close-button {
+    font-size: 18px; /* Más pequeño en móviles */
+  }
+
+  .quick-button {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+
+  .quick-buttons-scroll {
+    padding: 8px 10px;
+  }
+
+  .tab-text {
+    font-size: 0.85em;
+  }
+
+  .trivia-button,
+  .instrumento-button {
+    width: 32px; /* Más pequeño en móviles */
+    height: 32px;
+    font-size: 1em;
+    margin-right: 6px;
+  }
+
+  .test-option-button {
+    font-size: 0.85em;
+    padding: 10px 12px;
+  }
+
+  .chat-container {
+    height: calc(100% - 45px); /* Ajustado para la nueva altura del header en móviles */
+  }
+}
+
+/* Responsive para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .trivia-button,
+  .instrumento-button {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9em;
+    margin-right: 4px;
+  }
+
+  .header-text {
+    font-size: 0.75em;
+  }
+}
