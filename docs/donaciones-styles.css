@@ -1,0 +1,525 @@
+/* Estilos específicos para la página de donaciones */
+
+/* Variables de colores específicos para esta página */
+:root {
+    --orange: #ff6b00;
+    --green: #72d54a;
+    --light-orange: rgba(255, 107, 0, 0.2);
+    --light-green: rgba(114, 213, 74, 0.2);
+    --header-gradient-color1: #ff6b00; /* Color inicial del gradiente */
+    --header-gradient-color2: #72d54a; /* Color final del gradiente */
+    --title-color: white; /* Color del texto del título */
+    --title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Header con gradiente personalizable */
+.page-header-gradient {
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, var(--header-gradient-color1), var(--header-gradient-color2));
+  padding: var(--spacing-xl, 3rem) 0;
+}
+
+/* ESTILOS PARA EL LOGO */
+.page-logo {
+  max-width: 90%;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  transition: all 1.8s ease;
+}
+
+/* Estado cuando el logo se desvanece */
+.page-logo.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(2px);
+  visibility: hidden;
+}
+
+/* ESTILOS PARA EL TÍTULO */
+.page-title-container {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: all 1.5s ease;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(30px) scale(0.9);
+  width: 100%;
+}
+
+/* Estado cuando el título aparece */
+.page-title-container.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0) scale(1);
+}
+
+/* Estilos para las líneas del título */
+.page-title-line1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.page-title-line2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .page-header-gradient {
+    min-height: 50vh;
+    max-height: 70vh;
+  }
+
+  .page-logo {
+    max-height: 35vh;
+  }
+
+  .page-title-line1 {
+    font-size: 3rem;
+  }
+
+  .page-title-line2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-gradient {
+    min-height: 40vh;
+    max-height: 60vh;
+  }
+
+  .page-logo {
+    max-height: 30vh;
+    max-width: 95%;
+  }
+
+  .page-title-line1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .page-title-line2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-gradient {
+    min-height: 35vh;
+    max-height: 50vh;
+  }
+
+  .page-logo {
+    max-height: 25vh;
+  }
+
+  .page-title-line1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .page-title-line2 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
+/* Estilos para la navegación activa */
+.nav-menu a.active {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+/* Sección de introducción a las donaciones */
+.donation-intro-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--section-bg);
+}
+
+.donation-intro-section .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donation-intro-section p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+/* Sección de impacto de donaciones */
+.donation-impact-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.impact-card {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--orange);
+}
+
+.impact-card:nth-child(even) .impact-icon {
+    color: var(--green);
+}
+
+.impact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-secondary);
+}
+
+.impact-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sección de testimonios */
+.testimonials-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--section-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--light-orange), var(--light-green));
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.testimonials-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.testimonial {
+    display: none;
+    padding: var(--spacing-lg);
+}
+
+.testimonial.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-content {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial-content::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 5rem;
+    color: var(--orange);
+    font-family: serif;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.testimonial-author {
+    text-align: right;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.author-role {
+    font-size: 0.8rem;
+    color: var(--orange);
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+    gap: var(--spacing-xs);
+}
+
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background-color: var(--orange);
+    transform: scale(1.2);
+}
+
+/* Sección de donación con códigos QR */
+.qr-donation-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
+
+.donation-instructions {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.qr-card {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.qr-header {
+    padding: var(--spacing-md);
+    color: white;
+    text-align: center;
+}
+
+.orange-gradient {
+    background: linear-gradient(to right, var(--orange), #ff9d4d);
+}
+
+.green-gradient {
+    background: linear-gradient(to right, var(--green), #a0e47c);
+}
+
+.orange-green-gradient {
+    background: linear-gradient(to right, var(--orange), var(--green));
+}
+
+.qr-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: var(--font-secondary);
+}
+
+.qr-content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: var(--spacing-md);
+    background-color: white;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+}
+
+.qr-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-description {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.donation-note {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    border-left: 4px solid var(--orange);
+}
+
+.note-icon {
+    font-size: 2rem;
+    color: var(--orange);
+    flex-shrink: 0;
+}
+
+.note-content h4 {
+    font-family: var(--font-secondary);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+}
+
+.note-content p {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.note-content a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/* Sección de agradecimiento */
+.thank-you-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--section-bg);
+    text-align: center;
+}
+
+.thank-you-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thank-you-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-secondary);
+    color: var(--orange);
+}
+
+.thank-you-content p {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.donor-wall {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donor-wall h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-secondary);
+    color: var(--green);
+}
+
+.donor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.donor-list span {
+    background-color: var(--light-green);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .donations-header-gradient h1 {
+        font-size: 2.5rem;
+    }
+    
+    .donations-header-gradient h2 {
+        font-size: 1.25rem;
+    }
+    
+    .donation-note {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .donations-header-gradient h1 {
+        font-size: 2rem;
+    }
+    
+    .donations-header-gradient h2 {
+        font-size: 1rem;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .qr-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-content p {
+        font-size: 1rem;
+    }
+}

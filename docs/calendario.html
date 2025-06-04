@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendario-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="calendar-header-gradient">
+        <div class="container text-center header-content">
+            <!-- Logo que aparece primero -->
+            <img id="page-logo" src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" alt="Logo 50 Aniversario El Sistema Ciudad Guayana" loading="lazy" class="page-logo">
+            
+            <!-- Título que aparece después del logo -->
+            <div id="page-title" class="page-title-container">
+                <h1 class="page-title-line1">CALENDARIO</h1>
+                <h2 class="page-title-line2">DE EVENTOS</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+    <section class="branding-section">
+        <div class="container logo-social">
+            <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                <figure class="logo-wrapper">
+                    <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                    <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                </figure>
+                <div class="logo-text">
+                    <p class="bold">EL SISTEMA</p>
+                    <p>Núcleo Ciudad Guayana</p>
+                </div>
+            </div>
+            <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de introducción al calendario -->
+        <section class="calendar-intro-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="intro-text animate-on-scroll" data-animation="fadeIn">
+                        <h2 class="section-title">PRÓXIMOS EVENTOS</h2>
+                        <p>Descubre todos los conciertos, ensayos abiertos, clases magistrales y eventos especiales del Núcleo Ciudad Guayana. Mantente al día con nuestras actividades y no te pierdas ninguna oportunidad de disfrutar de la música.</p>
+                        <p>Puedes filtrar por tipo de evento utilizando las opciones del calendario. Para más información sobre cualquier evento, haz clic en él para ver todos los detalles.</p>
+                    </div>
+                    <div class="calendar-legend animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>Leyenda</h3>
+                        <ul class="legend-list">
+                            <li><span class="legend-dot concert"></span> Conciertos</li>
+                            <li><span class="legend-dot workshop"></span> Talleres</li>
+                            <li><span class="legend-dot rehearsal"></span> Ensayos abiertos</li>
+                            <li><span class="legend-dot special"></span> Eventos especiales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del calendario -->
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-wrapper animate-on-scroll" data-animation="fadeInUp">
+                    <div class="calendar-container">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=178b61c8644be1a12158dfc3cec68d228a0187259c4336e19cd4c4b3f9490861%40group.calendar.google.com&ctz=America%2FCaracas" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no" title="Calendario de eventos de El Sistema Núcleo Ciudad Guayana"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos destacados -->
+        <section class="featured-events-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">EVENTOS DESTACADOS</h2>
+                <div class="events-grid">
+                    <!-- Evento 1 -->
+                    <article class="event-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="event-date">
+                            <time datetime="2023-05-15">
+                                <span class="date-number">15</span>
+                                <span class="date-month">MAY</span>
+                            </time>
+                        </div>
+                        <div class="event-image turquoise-gradient">
+                            <div class="event-tag concert-tag">Concierto</div>
+                        </div>
+                        <div class="event-details">
+                            <h3>Gala Sinfónica</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Teatro Angostura</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 19:00</p>
+                            <p class="event-description">Concierto especial con obras de Mozart, Beethoven y compositores venezolanos.</p>
+                            <a href="#" class="btn turquoise">MÁS INFORMACIÓN</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 2 -->
+                    <article class="event-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="event-date">
+                            <time datetime="2023-05-22">
+                                <span class="date-number">22</span>
+                                <span class="date-month">MAY</span>
+                            </time>
+                        </div>
+                        <div class="event-image purple-gradient">
+                            <div class="event-tag workshop-tag">Taller</div>
+                        </div>
+                        <div class="event-details">
+                            <h3>Masterclass de Violín</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Sede El Sistema</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 15:00</p>
+                            <p class="event-description">Clase magistral con el reconocido violinista internacional Carlos Rodríguez.</p>
+                            <a href="#" class="btn purple">MÁS INFORMACIÓN</a>
+                        </div>
+                    </article>
+
+                    <!-- Evento 3 -->
+                    <article class="event-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="event-date">
+                            <time datetime="2023-05-28">
+                                <span class="date-number">28</span>
+                                <span class="date-month">MAY</span>
+                            </time>
+                        </div>
+                        <div class="event-image dark-blue-gradient">
+                            <div class="event-tag rehearsal-tag">Ensayo</div>
+                        </div>
+                        <div class="event-details">
+                            <h3>Ensayo Abierto</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Sede El Sistema</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 16:30</p>
+                            <p class="event-description">Ensayo abierto al público de la Orquesta Juvenil preparando su próximo concierto.</p>
+                            <a href="#" class="btn dark-blue">MÁS INFORMACIÓN</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de suscripción a eventos -->
+        <section class="subscribe-section">
+            <div class="container">
+                <div class="subscribe-content animate-on-scroll" data-animation="fadeIn">
+                    <h2>MANTENTE INFORMADO</h2>
+                    <p>Suscríbete a nuestro boletín para recibir información sobre próximos eventos y actividades.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Tu correo electrónico">
+                        <button type="submit" class="btn turquoise">SUSCRIBIRSE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

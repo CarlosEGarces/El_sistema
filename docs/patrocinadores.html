@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Patrocinadores - El Sistema Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="patrocinadores-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">PATROCINANTES</h1>
+            <h2 class="page-title-line2">QUIENES HACEN POSIBLE NUESTRA LABOR</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+        <section class="branding-section">
+            <div class="container logo-social">
+                <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                    <figure class="logo-wrapper">
+                        <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                        <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                    </figure>
+                    <div class="logo-text">
+                        <p class="bold">EL SISTEMA</p>
+                        <p>Núcleo Ciudad Guayana</p>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de agradecimiento -->
+        <section class="agradecimiento">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">GRACIAS POR SU APOYO</h2>
+                <div class="agradecimiento-content animate-on-scroll" data-animation="fadeInUp">
+                    <p>En El Sistema Ciudad Guayana, reconocemos que nuestro impacto en la comunidad solo es posible gracias al generoso apoyo de nuestros patrocinadores. Cada contribución, grande o pequeña, nos permite continuar transformando vidas a través de la música.</p>
+                    <p>Nuestros patrocinadores no solo aportan recursos financieros, sino que también comparten nuestra visión de un futuro mejor para los niños y jóvenes de nuestra ciudad. Su compromiso con la educación musical y el desarrollo social es fundamental para el éxito de nuestro programa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de patrocinadores principales -->
+        <section class="patrocinadores-principales">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">PATROCINADORES PRINCIPALES</h2>
+                <div class="patrocinadores-grid">
+                    <div class="patrocinador-card principal animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Empresa A">
+                        </div>
+                        <h3>Empresa A</h3>
+                        <p class="categoria">Patrocinador Platino</p>
+                        <p class="descripcion">Apoyando a El Sistema Ciudad Guayana desde sus inicios, Empresa A ha sido fundamental en la construcción de nuestra sede principal y en la adquisición de instrumentos musicales.</p>
+                        <a href="https://www.empresaa.com" class="btn outline small" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>
+                    </div>
+                    <div class="patrocinador-card principal animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Fundación B">
+                        </div>
+                        <h3>Fundación B</h3>
+                        <p class="categoria">Patrocinador Platino</p>
+                        <p class="descripcion">La Fundación B ha financiado nuestros programas de becas, permitiendo que cientos de niños de escasos recursos reciban formación musical de calidad.</p>
+                        <a href="https://www.fundacionb.org" class="btn outline small" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>
+                    </div>
+                    <div class="patrocinador-card principal animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Corporación C">
+                        </div>
+                        <h3>Corporación C</h3>
+                        <p class="categoria">Patrocinador Oro</p>
+                        <p class="descripcion">Gracias a Corporación C, hemos podido expandir nuestro programa a nuevos núcleos en zonas vulnerables de la ciudad, ampliando nuestro alcance e impacto.</p>
+                        <a href="https://www.corporacionc.com" class="btn outline small" target="_blank" rel="noopener noreferrer">Visitar sitio web</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de patrocinadores secundarios -->
+        <section class="patrocinadores-secundarios">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">PATROCINADORES INSTITUCIONALES</h2>
+                <div class="patrocinadores-grid">
+                    <div class="patrocinador-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Empresa D">
+                        </div>
+                        <h3>Empresa D</h3>
+                        <p class="categoria">Patrocinador Plata</p>
+                        <p class="descripcion">Apoya nuestros conciertos didácticos en escuelas públicas.</p>
+                    </div>
+                    <div class="patrocinador-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Compañía E">
+                        </div>
+                        <h3>Compañía E</h3>
+                        <p class="categoria">Patrocinador Plata</p>
+                        <p class="descripcion">Financia nuestro programa de mantenimiento de instrumentos.</p>
+                    </div>
+                    <div class="patrocinador-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Grupo F">
+                        </div>
+                        <h3>Grupo F</h3>
+                        <p class="categoria">Patrocinador Bronce</p>
+                        <p class="descripcion">Contribuye con el transporte de nuestros estudiantes a presentaciones.</p>
+                    </div>
+                    <div class="patrocinador-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="patrocinador-logo">
+                            <img src="/placeholder.svg?height=180&width=300" alt="Asociación G">
+                        </div>
+                        <h3>Asociación G</h3>
+                        <p class="categoria">Patrocinador Bronce</p>
+                        <p class="descripcion">Apoya nuestros talleres de formación para profesores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de aliados -->
+        <section class="aliados">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">ALIADOS ESTRATÉGICOS</h2>
+                <div class="aliados-grid">
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Universidad H">
+                        <h4>Universidad H</h4>
+                    </div>
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="150">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Centro Cultural I">
+                        <h4>Centro Cultural I</h4>
+                    </div>
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Conservatorio J">
+                        <h4>Conservatorio J</h4>
+                    </div>
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="250">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Fundación K">
+                        <h4>Fundación K</h4>
+                    </div>
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Asociación L">
+                        <h4>Asociación L</h4>
+                    </div>
+                    <div class="aliado animate-on-scroll" data-animation="fadeInUp" data-delay="350">
+                        <img src="/placeholder.svg?height=80&width=150" alt="Instituto M">
+                        <h4>Instituto M</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de colaboradores -->
+        <section class="colaboradores">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">COLABORADORES</h2>
+                <div class="colaboradores-logos animate-on-scroll" data-animation="fadeInUp">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 1">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 2">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 3">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 4">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 5">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 6">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 7">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 8">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 9">
+                    <img src="/placeholder.svg?height=60&width=120" alt="Colaborador 10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Sé un patrocinador" -->
+        <section class="se-patrocinador">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">SÉ UN PATROCINADOR</h2>
+                <div class="patrocinio-content">
+                    <div class="patrocinio-text animate-on-scroll" data-animation="fadeInLeft">
+                        <p>Tu apoyo puede marcar la diferencia en la vida de cientos de niños y jóvenes. Al convertirte en patrocinador de El Sistema Ciudad Guayana, no solo contribuyes a la formación musical de nuevas generaciones, sino que también te asocias a un proyecto de alto impacto social reconocido nacional e internacionalmente.</p>
+                        <p>Ofrecemos diferentes modalidades de patrocinio adaptadas a las posibilidades y objetivos de cada organización. Todos nuestros patrocinadores reciben reconocimiento público y beneficios exclusivos.</p>
+                        <h3>Beneficios para patrocinadores:</h3>
+                        <ul>
+                            <li>Presencia de marca en nuestros eventos y materiales promocionales</li>
+                            <li>Conciertos privados para su organización</li>
+                            <li>Entradas VIP para nuestras presentaciones</li>
+                            <li>Reconocimiento en nuestra página web y redes sociales</li>
+                            <li>Certificado de responsabilidad social empresarial</li>
+                            <li>Posibilidad de desarrollar proyectos conjuntos</li>
+                        </ul>
+                    </div>
+                    <div class="patrocinio-opciones animate-on-scroll" data-animation="fadeInRight">
+                        <div class="opcion-patrocinio">
+                            <h3>Patrocinio Platino</h3>
+                            <ul>
+                                <li>Aporte anual de $10,000 o más</li>
+                                <li>Máxima visibilidad en todos nuestros eventos</li>
+                                <li>Concierto privado anual</li>
+                                <li>20 entradas VIP por temporada</li>
+                            </ul>
+                        </div>
+                        <div class="opcion-patrocinio">
+                            <h3>Patrocinio Oro</h3>
+                            <ul>
+                                <li>Aporte anual de $5,000 a $9,999</li>
+                                <li>Alta visibilidad en eventos principales</li>
+                                <li>10 entradas VIP por temporada</li>
+                            </ul>
+                        </div>
+                        <div class="opcion-patrocinio">
+                            <h3>Patrocinio Plata</h3>
+                            <ul>
+                                <li>Aporte anual de $1,000 a $4,999</li>
+                                <li>Visibilidad en programas de mano</li>
+                                <li>5 entradas VIP por temporada</li>
+                            </ul>
+                        </div>
+                        <div class="opcion-patrocinio">
+                            <h3>Patrocinio Bronce</h3>
+                            <ul>
+                                <li>Aporte anual hasta $999</li>
+                                <li>Mención en nuestra página web</li>
+                                <li>2 entradas VIP por temporada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto-patrocinio animate-on-scroll" data-animation="fadeInUp">
+                    <h3>¿Interesado en ser patrocinador?</h3>
+                    <p>Contáctanos para recibir más información sobre nuestras opciones de patrocinio y cómo tu organización puede unirse a nuestra misión.</p>
+                    <a href="#contacto-form" class="btn pink">CONTÁCTANOS</a>
+                </div>
+            </div>
+        </section>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNBQ4fXCsg4P_lKy4Vw3Sfx_WlSmjoBt9TaaMmYZSoC30tQw/viewform?embedded=true" width="640" height="1018" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="patrocinadores.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

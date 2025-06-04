@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es" class="light-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciación Musical - El Sistema Ciudad Guayana</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="iniciacion-musical-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Botón de cambio de modo -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+      <i class="fas fa-sun"></i>
+  </button>
+
+  <!-- Header personalizado para Iniciación Musical -->
+  <header class="page-header-gradient">
+      <div class="container">
+          <!-- Logo que aparece primero -->
+          <img id="page-logo" 
+               src="../img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+               alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+               loading="lazy" 
+               class="page-logo">
+          
+          <!-- Título que aparece después -->
+          <div id="page-title" class="page-title-container">
+              <h1 class="page-title-line1">INICIACIÓN MUSICAL</h1>
+              <p class="page-title-line2">Primeros pasos hacia la excelencia musical</p>
+          </div>
+      </div>
+  </header>
+
+  <!-- Navegación principal (reutilizada del index) -->
+  <nav class="main-nav" aria-label="Navegación principal">
+      <div class="container">
+          <button class="hamburger-menu" aria-label="Abrir menú">
+              <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+              <li class="nav-item"><a href="../index.html">INICIO</a><div class="music-notes"></div></li>               
+              <li class="nav-item dropdown">
+                  <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                  <div class="music-notes"></div>
+                  <ul class="dropdown-menu">
+                      <li><a href="../calendario.html">CALENDARIO</a></li>
+                      <li><a href="../boletos.html">BOLETOS</a></li>
+                  </ul>
+              </li>                
+              <li class="nav-item dropdown">
+                  <a href="#agrupaciones" class="dropdown-toggle">AGRUPACIONES</a>
+                  <div class="music-notes"></div>
+                  <ul class="dropdown-menu">
+                      <li><a href="iniciacion-musical.html">Iniciación Musical</a></li>
+                      <li><a href="alma-llanera.html">Programa Alma Llanera</a></li>
+                      <li><a href="simon-bolivar.html">Programa Simón Bolívar</a></li>
+                      <li><a href="programa-coral.html">Programa Coral</a></li>
+                      <li><a href="orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                      <li><a href="orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a href="#agrupaciones" class="dropdown-toggle">GALERÍA AUDIOVISUAL</a>
+                  <div class="camera-animation"></div>
+                  <ul class="dropdown-menu">
+                      <li><a href="../galeria/galeria-imagenes.html">GALERÍA DE IMÁGENES</a></li>
+                      <li><a href="../galeria/galeria-videos.html">GALERÍA DE VIDEOS</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                  <div class="music-notes"></div>
+                  <ul class="dropdown-menu">
+                      <li><a href="../donaciones.html">DONACIONES</a></li>
+                      <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                  <div class="music-notes"></div>
+                  <ul class="dropdown-menu">
+                      <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                      <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                      <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                      <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Menú móvil (reutilizado del index) -->
+  <div class="mobile-menu-container" id="mobile-menu">
+      <div class="mobile-menu-header">
+          <button class="close-menu-button" aria-label="Cerrar menú">
+              <i class="fas fa-times"></i>
+          </button>
+      </div>
+      <nav class="mobile-menu">
+          <ul>
+              <li><a href="../index.html">INICIO</a></li>
+              <li class="has-dropdown">
+                  <button class="dropdown-toggle">
+                      CONCIERTOS Y EVENTOS
+                      <i class="fas fa-chevron-down dropdown-icon"></i>
+                  </button>
+                  <ul class="dropdown-content">
+                      <li><a href="../calendario.html">CALENDARIO</a></li>
+                      <li><a href="../boletos.html">BOLETOS</a></li>
+                  </ul>
+              </li>
+              <li class="has-dropdown">
+                  <button class="dropdown-toggle">
+                      AGRUPACIONES
+                      <i class="fas fa-chevron-down dropdown-icon"></i>
+                  </button>
+                  <ul class="dropdown-content">
+                      <li><a href="iniciacion-musical.html">Iniciación Musical</a></li>
+                      <li><a href="alma-llanera.html">Programa Alma Llanera</a></li>
+                      <li><a href="simon-bolivar.html">Programa Simón Bolívar</a></li>
+                      <li><a href="programa-coral.html">Programa Coral</a></li>
+                      <li><a href="orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                      <li><a href="orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                  </ul>
+              </li>
+              <li class="has-dropdown">
+                  <button class="dropdown-toggle">
+                      GALERÍA AUDIOVISUAL
+                      <i class="fas fa-chevron-down dropdown-icon"></i>
+                  </button>
+                  <ul class="dropdown-content">
+                      <li><a href="../galeria/galeria-imagenes.html">GALERÍA DE IMÁGENES</a></li>
+                      <li><a href="../galeria/galeria-videos.html">GALERÍA DE VIDEOS</a></li>
+                  </ul>
+              </li>
+              <li class="has-dropdown">
+                  <button class="dropdown-toggle">
+                      APOYO
+                      <i class="fas fa-chevron-down dropdown-icon"></i>
+                  </button>
+                  <ul class="dropdown-content">
+                      <li><a href="../donaciones.html">DONACIONES</a></li>
+                      <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                  </ul>
+              </li>
+              <li class="has-dropdown">
+                  <button class="dropdown-toggle">
+                      SOBRE NOSOTROS
+                      <i class="fas fa-chevron-down dropdown-icon"></i>
+                  </button>
+                  <ul class="dropdown-content">
+                      <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                      <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                      <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                      <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sección de logo y redes sociales (reutilizada del index) -->
+  <section class="branding-section">
+      <div class="container logo-social">
+          <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+              <figure class="logo-wrapper">
+                  <img src="../img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                  <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+              </figure>
+              <div class="logo-text">
+                  <p class="bold">EL SISTEMA</p>
+                  <p>Núcleo Ciudad Guayana</p>
+              </div>
+          </div>
+          <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+      </div>
+  </section>
+
+  <main id="contenido-principal">
+      <!-- Sección de introducción -->
+      <section class="program-intro-section">
+          <div class="container">
+              <div class="content-wrapper">
+                  <div class="intro-content animate-on-scroll animate-fade-in-up" data-animation="fadeInUp">
+                      <h2 class="section-title">SOBRE EL PROGRAMA</h2>
+                      <p class="intro-description">
+                          El Programa de Iniciación Musical está comprendido por niños desde los 4 años de edad, 
+                          donde dan sus primeros pasos en el ámbito musical. Este programa fundamental sienta las 
+                          bases para el desarrollo musical y personal de nuestros pequeños músicos, creando una 
+                          experiencia transformadora que perdurará toda la vida.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Sección de profesores -->
+      <section class="teachers-section" id="profesores">
+          <div class="container">
+              <h2 class="section-title animate-on-scroll" data-animation="fadeIn">NUESTROS PROFESORES</h2>
+              <div class="teachers-content">
+                  <div class="teachers-image animate-on-scroll" data-animation="fadeInLeft">
+                      <div class="teachers-gradient soft-edge">
+                          <div class="teachers-overlay">
+                              <i class="fas fa-music teachers-icon animate-bounce"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="teachers-info animate-on-scroll" data-animation="fadeInRight">
+                      <h3>Equipo Docente Especializado</h3>
+                      <p>
+                          Nuestro programa cuenta con un equipo de profesores altamente capacitados y 
+                          comprometidos con la formación musical temprana de los niños, cada uno con 
+                          años de experiencia en pedagogía musical infantil.
+                      </p>
+                      <div class="teachers-list">
+                          <div class="teacher-card">
+                              <div class="teacher-icon">
+                                  <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="teacher-info">
+                                  <h4>Prof. Julio Sanchez</h4>
+                                  <p>Especialista en Iniciación Musical</p>
+                              </div>
+                          </div>
+                          <div class="teacher-card">
+                              <div class="teacher-icon">
+                                  <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="teacher-info">
+                                  <h4>Prof. Martha Cabrera</h4>
+                                  <p>Especialista en Iniciación Musical</p>
+                              </div>
+                          </div>
+                          <div class="teacher-card">
+                              <div class="teacher-icon">
+                                  <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="teacher-info">
+                                  <h4>Prof. Maritza Madrid</h4>
+                                  <p>Especialista en Iniciación Musical</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Sección de importancia -->
+      <section class="importance-section">
+          <div class="container">
+              <h2 class="section-title animate-on-scroll" data-animation="fadeIn">IMPORTANCIA DE LA ORQUESTA PRE-INFANTIL</h2>
+              <div class="importance-grid">
+                  <article class="importance-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                      <div class="card-icon">
+                          <i class="fas fa-music"></i>
+                      </div>
+                      <h3>Introducción Temprana a la Música Sinfónica</h3>
+                      <p>
+                          Los niños se familiarizan desde pequeños con el repertorio sinfónico y 
+                          desarrollan una comprensión natural de la música clásica, creando una 
+                          base sólida para su futuro musical.
+                      </p>
+                  </article>
+
+                  <article class="importance-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                      <div class="card-icon">
+                          <i class="fas fa-brain"></i>
+                      </div>
+                      <h3>Desarrollo de Habilidades Musicales Básicas</h3>
+                      <p>
+                          Facilita el aprendizaje gradual de destrezas fundamentales como afinación, 
+                          ritmo, coordinación, motricidad fina y escucha activa, elementos esenciales 
+                          para el crecimiento musical.
+                      </p>
+                  </article>
+
+                  <article class="importance-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                      <div class="card-icon">
+                          <i class="fas fa-users"></i>
+                      </div>
+                      <h3>Formación en Disciplina y Trabajo en Equipo</h3>
+                      <p>
+                          Los niños aprenden la importancia de la disciplina, responsabilidad, 
+                          respeto mutuo, comunicación efectiva y solidaridad colectiva a través 
+                          de la práctica musical grupal.
+                      </p>
+                  </article>
+
+                  <article class="importance-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                      <div class="card-icon">
+                          <i class="fas fa-heart"></i>
+                      </div>
+                      <h3>Impacto en el Desarrollo Cognitivo y Emocional</h3>
+                      <p>
+                          Estimula el desarrollo cognitivo, potencia la memoria, concentración y 
+                          pensamiento lógico, mientras fortalece la autoestima, creatividad y 
+                          expresión emocional.
+                      </p>
+                  </article>
+              </div>
+          </div>
+      </section>
+
+      <!-- Sección de beneficios -->
+      <section class="benefits-section">
+          <div class="container">
+              <div class="content-wrapper benefits-content">
+                  <div class="benefits-text animate-on-scroll" data-animation="fadeInLeft">
+                      <h2>BENEFICIOS DEL PROGRAMA</h2>
+                      <div class="benefits-list">
+                          <div class="benefit-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Fortalecimiento de la autoestima y confianza personal</span>
+                          </div>
+                          <div class="benefit-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Gestión emocional a través de la expresión artística</span>
+                          </div>
+                          <div class="benefit-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Fomento de la creatividad e imaginación</span>
+                          </div>
+                          <div class="benefit-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Desarrollo de habilidades sociales cruciales</span>
+                          </div>
+                          <div class="benefit-item">
+                              <i class="fas fa-check-circle"></i>
+                              <span>Base sólida para niveles orquestales avanzados</span>
+                          </div>
+                      </div>
+                      <div class="text-center">
+                          <a href="../index.html#donaciones" class="btn pink">APOYA ESTE PROGRAMA</a>
+                      </div>
+                  </div>
+                  <div class="benefits-image animate-on-scroll" data-animation="fadeInRight">
+                      <div class="benefits-gradient soft-edge"></div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Sección de contacto -->
+      <section class="contact-section">
+          <div class="container">
+              <h2 class="section-title animate-on-scroll" data-animation="fadeIn">INFORMACIÓN DE CONTACTO</h2>
+              <div class="contact-content animate-on-scroll" data-animation="fadeInUp">
+                  <div class="contact-info">
+                      <div class="contact-item">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <div>
+                              <h4>Ubicación</h4>
+                              <p>Av. Guayana, Centro Empresarial Centro Alta Vista (Antiguo Maxy's), P.B., Alta Vista, Puerto Ordaz, Municipio Caroní, Ciudad Guayana, Estado Bolívar</p>
+                          </div>
+                      </div>
+                      <div class="contact-item">
+                          <i class="fas fa-envelope"></i>
+                          <div>
+                              <h4>Email</h4>
+                              <p>nucleo.ciudadguayana@elsistema.org.ve</p>
+                          </div>
+                      </div>
+                      <div class="contact-item">
+                          <i class="fas fa-child"></i>
+                          <div>
+                              <h4>Edad de Ingreso</h4>
+                              <p>Niños desde los 4 años de edad</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="../script.js"></script>
+  <script src="../chatbot-button.js"></script>
+  <script>
+      // Script específico para la animación del header de Iniciación Musical
+      document.addEventListener('DOMContentLoaded', function() {
+          const logo = document.getElementById('page-logo');
+          const title = document.getElementById('page-title');
+          
+          // Mostrar logo primero
+          setTimeout(() => {
+              // Después de 3 segundos, ocultar logo y mostrar título
+              logo.classList.add('fade-out');
+              setTimeout(() => {
+                  title.classList.add('show');
+              }, 500);
+          }, 3000);
+      });
+  </script>
+</body>
+</html>

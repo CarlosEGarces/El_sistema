@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="boletos-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+   <header class="page-header-gradient">
+        <div class="container text-center header-content">
+            <!-- Logo que aparece primero y luego desaparece -->
+            <img id="page-logo" 
+                src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+                alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+                loading="lazy" 
+                class="page-logo">
+            
+            <!-- Título que aparece después del logo -->
+            <div id="page-title" class="page-title-container">
+                <h1 class="page-title-line1">BOLETOS</h1>
+                <h2 class="page-title-line2">MÚSICA PARA TODOS</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales - ACTUALIZADA: Más minimalista -->
+    <section class="branding-section">
+        <div class="container logo-social">
+            <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                <figure class="logo-wrapper">
+                    <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                    <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                </figure>
+                <div class="logo-text">
+                    <p class="bold">EL SISTEMA</p>
+                    <p>Núcleo Ciudad Guayana</p>
+                </div>
+            </div>
+            <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de información sobre conciertos gratuitos -->
+        <section class="free-tickets-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="intro-text animate-on-scroll" data-animation="fadeIn">
+                        <h2 class="section-title">CONCIERTOS GRATUITOS PARA TODOS</h2>
+                        <p>En El Sistema Núcleo Ciudad Guayana, creemos firmemente que la música es un derecho universal y no un privilegio. Por eso, todos nuestros conciertos son <span class="highlight">completamente gratuitos</span> para el público.</p>
+                        <p>Esta política de acceso libre es posible gracias al apoyo de nuestros patrocinadores y donantes que comparten nuestra visión de hacer la música clásica accesible para todos.</p>
+                    </div>
+                    <div class="tickets-icon animate-on-scroll" data-animation="fadeIn" data-delay="300">
+                        <i class="fas fa-music"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de invitación al calendario de eventos -->
+        <section class="calendar-invitation-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">DESCUBRE NUESTROS EVENTOS</h2>
+                <div class="calendar-content animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                    <div class="calendar-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="calendar-text">
+                        <p>Te invitamos a explorar nuestra programación completa de conciertos y presentaciones en nuestra página de Calendario de Eventos.</p>
+                        <p>Allí encontrarás información detallada sobre fechas, horarios, ubicaciones y repertorios de todos nuestros próximos conciertos.</p>
+                        <a href="calendario.html" class="calendar-btn">VER CALENDARIO DE EVENTOS</a>
+                    </div>
+                </div>
+                <div class="calendar-note animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                    <div class="note-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="note-content">
+                        <h4>Importante</h4>
+                        <p>Todos nuestros conciertos son de entrada libre hasta completar el aforo. Te recomendamos llegar con anticipación para asegurar tu lugar.</p>
+                        <p>No se requiere reservación ni boletos para asistir a nuestros eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de información sobre asistencia -->
+        <section class="attendance-info-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">INFORMACIÓN PARA ASISTENTES</h2>
+                <div class="info-grid">
+                    <div class="info-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Horario de llegada</h3>
+                        <p>Recomendamos llegar 30 minutos antes del inicio del concierto para encontrar asiento cómodamente.</p>
+                    </div>
+                    <div class="info-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="info-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Conciertos familiares</h3>
+                        <p>Los niños son bienvenidos en nuestros conciertos didácticos y familiares, especialmente diseñados para todas las edades.</p>
+                    </div>
+                    <div class="info-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="info-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Fotografía</h3>
+                        <p>Se permite tomar fotografías sin flash. Grabaciones de video solo están permitidas en momentos específicos.</p>
+                    </div>
+                    <div class="info-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="info-icon">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <h3>Accesibilidad</h3>
+                        <p>Nuestras sedes cuentan con acceso para personas con movilidad reducida. Consulta detalles específicos de cada sede.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de apoyo y donaciones -->
+        <section class="support-section">
+            <div class="container">
+                <div class="support-content animate-on-scroll" data-animation="fadeIn">
+                    <h2 class="section-title">AYÚDANOS A MANTENER LA MÚSICA GRATUITA</h2>
+                    <p>Nuestros conciertos gratuitos son posibles gracias al generoso apoyo de personas como tú. Tu donación, sin importar su tamaño, contribuye directamente a:</p>
+                    <div class="support-benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon"><i class="fas fa-music"></i></div>
+                            <p>Mantener y adquirir instrumentos musicales</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <p>Apoyar a nuestros talentosos profesores</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon"><i class="fas fa-building"></i></div>
+                            <p>Cubrir costos de locales para ensayos y conciertos</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <p>Becas para estudiantes con talento excepcional</p>
+                        </div>
+                    </div>
+                    <div class="donation-cta">
+                        <p>¿Quieres ser parte de esta hermosa misión?</p>
+                        <a href="donaciones.html" class="donate-btn">REALIZAR UNA DONACIÓN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de testimonios -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">LO QUE DICE NUESTRO PÚBLICO</h2>
+                <div class="testimonials-slider animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"Asistir a los conciertos de El Sistema ha sido una experiencia transformadora para mi familia. Nunca pensé que podríamos disfrutar de música clásica de tan alta calidad de forma gratuita."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">Laura Méndez</p>
+                                <p class="author-role">Asistente regular</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"El concierto didáctico fue perfecto para introducir a mis hijos al mundo de la música clásica. Los músicos jóvenes son una verdadera inspiración."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">Roberto Castillo</p>
+                                <p class="author-role">Padre de familia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"La calidad musical de estos jóvenes es impresionante. Es un orgullo para Ciudad Guayana contar con un proyecto cultural de esta magnitud."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">Carmen Rodríguez</p>
+                                <p class="author-role">Profesora de música</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-dot active" data-index="0" aria-label="Testimonio 1"></button>
+                    <button class="testimonial-dot" data-index="1" aria-label="Testimonio 2"></button>
+                    <button class="testimonial-dot" data-index="2" aria-label="Testimonio 3"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+
+                <!-- Sección izquierda: Logo y descripción -->
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <!-- Sección central: Enlaces institucionales y online -->
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sección derecha: "TÚ ERES..." -->
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de patrocinadores -->
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

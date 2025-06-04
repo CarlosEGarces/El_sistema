@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Prensa - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="noticias-prensa-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">PATROCINANTES</h1>
+            <h2 class="page-title-line2">QUIENES HACEN POSIBLE NUESTRA LABOR</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+        <section class="branding-section">
+            <div class="container logo-social">
+                <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                    <figure class="logo-wrapper">
+                        <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                        <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                    </figure>
+                    <div class="logo-text">
+                        <p class="bold">EL SISTEMA</p>
+                        <p>Núcleo Ciudad Guayana</p>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de noticias destacadas -->
+        <section class="featured-news-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">NOTICIAS DESTACADAS</h2>
+                <div class="featured-news-grid">
+                    <!-- Noticia destacada principal -->
+                    <div class="featured-news-main animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <div class="news-image">
+                            <img src="/placeholder.svg?height=400&width=800" alt="Orquesta Sinfónica de Ciudad Guayana">
+                            <div class="news-tag">Destacado</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">15 de marzo de 2023</span>
+                                <span class="news-source">Primicia</span>
+                            </div>
+                            <h3 class="news-title">Ceden oficinas de CVG a Orquesta Sinfónica de Ciudad Guayana</h3>
+                            <p class="news-excerpt">La Corporación Venezolana de Guayana (CVG) cedió un espacio en sus instalaciones para que la Orquesta Sinfónica de Ciudad Guayana pueda realizar sus ensayos y actividades administrativas, fortaleciendo así el desarrollo cultural de la región.</p>
+                            <a href="https://primicia.com.ve/placeres/ceden-oficinas-de-cvg-a-orquesta-sinfonica-de-ciudad-guayana/" class="read-more-btn" target="_blank">Leer artículo completo</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Noticias destacadas secundarias -->
+                    <div class="featured-news-secondary animate-on-scroll" data-animation="fadeIn" data-delay="300">
+                        <div class="news-image">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Concierto de la Orquesta Sinfónica">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">8 de febrero de 2023</span>
+                                <span class="news-source">Primicia</span>
+                            </div>
+                            <h3 class="news-title">Orquesta Sinfónica en Guayana quiere ofrecer más conciertos</h3>
+                            <p class="news-excerpt">La agrupación musical busca ampliar su oferta de presentaciones para llegar a más público en la región.</p>
+                            <a href="https://primicia.com.ve/guayana/ciudad/orquesta-sinfonica-en-guayana-quiere-ofrecer-mas-conciertos/" class="read-more-link" target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-news-secondary animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <div class="news-image">
+                            <img src="/placeholder.svg?height=250&width=400" alt="Director invitado con la Orquesta">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date">20 de enero de 2023</span>
+                                <span class="news-source">Primicia</span>
+                            </div>
+                            <h3 class="news-title">Orquesta Sinfónica de Ciudad Guayana se presentó con director invitado</h3>
+                            <p class="news-excerpt">La agrupación musical ofreció un concierto especial bajo la batuta de un reconocido director internacional.</p>
+                            <a href="https://primicia.com.ve/placeres/orquesta-sinfonica-de-ciudad-guayana-se-presento-con-director-invitado/" class="read-more-link" target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de artículos de prensa -->
+        <section class="press-articles-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">ARTÍCULOS DE PRENSA</h2>
+                <div class="press-articles-list">
+                    <!-- Artículo 1 -->
+                    <article class="press-article animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="article-image">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Oficinas de CVG cedidas a la Orquesta">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">15 de marzo de 2023</span>
+                                <span class="article-source"><i class="fas fa-newspaper"></i> Primicia</span>
+                            </div>
+                            <h3 class="article-title">Ceden oficinas de CVG a Orquesta Sinfónica de Ciudad Guayana</h3>
+                            <p class="article-excerpt">La Corporación Venezolana de Guayana (CVG) cedió un espacio en sus instalaciones para que la Orquesta Sinfónica de Ciudad Guayana pueda realizar sus ensayos y actividades administrativas. Esta decisión representa un importante apoyo al desarrollo cultural de la región y fortalece la presencia de El Sistema en Ciudad Guayana.</p>
+                            <div class="article-footer">
+                                <a href="https://primicia.com.ve/placeres/ceden-oficinas-de-cvg-a-orquesta-sinfonica-de-ciudad-guayana/" class="article-link" target="_blank">
+                                    <span>Leer artículo completo</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Artículo 2 -->
+                    <article class="press-article animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="article-image">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Orquesta Sinfónica en concierto">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">8 de febrero de 2023</span>
+                                <span class="article-source"><i class="fas fa-newspaper"></i> Primicia</span>
+                            </div>
+                            <h3 class="article-title">Orquesta Sinfónica en Guayana quiere ofrecer más conciertos</h3>
+                            <p class="article-excerpt">La Orquesta Sinfónica de Ciudad Guayana ha anunciado su intención de ampliar su oferta de conciertos para el público guayanés. Con un repertorio variado que incluye música clásica, contemporánea y tradicional venezolana, la agrupación busca llegar a más espacios y comunidades de la región.</p>
+                            <div class="article-footer">
+                                <a href="https://primicia.com.ve/guayana/ciudad/orquesta-sinfonica-en-guayana-quiere-ofrecer-mas-conciertos/" class="article-link" target="_blank">
+                                    <span>Leer artículo completo</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Artículo 3 -->
+                    <article class="press-article animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="article-image">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Director invitado con la Orquesta">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">20 de enero de 2023</span>
+                                <span class="article-source"><i class="fas fa-newspaper"></i> Primicia</span>
+                            </div>
+                            <h3 class="article-title">Orquesta Sinfónica de Ciudad Guayana se presentó con director invitado</h3>
+                            <p class="article-excerpt">La Orquesta Sinfónica de Ciudad Guayana ofreció un concierto especial bajo la batuta de un reconocido director internacional. El evento, que tuvo lugar en el Teatro de la Ópera de Ciudad Guayana, contó con un programa que incluyó obras de compositores clásicos y contemporáneos, demostrando el alto nivel artístico de la agrupación.</p>
+                            <div class="article-footer">
+                                <a href="https://primicia.com.ve/placeres/orquesta-sinfonica-de-ciudad-guayana-se-presento-con-director-invitado/" class="article-link" target="_blank">
+                                    <span>Leer artículo completo</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Artículo 4 -->
+                    <article class="press-article animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="article-image">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Músicos guayaneses en aniversario">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">5 de diciembre de 2022</span>
+                                <span class="article-source"><i class="fas fa-broadcast-tower"></i> Radio Fe y Alegría Noticias</span>
+                            </div>
+                            <h3 class="article-title">Músicos guayaneses destacaron en el aniversario de la Orquesta Sinfónica Regional Juvenil de Bolívar</h3>
+                            <p class="article-excerpt">Jóvenes músicos de Ciudad Guayana tuvieron una destacada participación en la celebración del aniversario de la Orquesta Sinfónica Regional Juvenil de Bolívar. El evento reunió a talentos de toda la región, quienes demostraron el alto nivel de formación musical que reciben en El Sistema.</p>
+                            <div class="article-footer">
+                                <a href="https://www.radiofeyalegrianoticias.com/musicos-guayaneses-destacaron-en-el-aniversario-de-la-orquesta-sinfonica-regional-juvenil-de-bolivar/" class="article-link" target="_blank">
+                                    <span>Leer artículo completo</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de comunicados de prensa -->
+        <section class="press-releases-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">COMUNICADOS OFICIALES</h2>
+                <div class="press-releases-content">
+                    <div class="press-releases-text animate-on-scroll" data-animation="fadeInLeft">
+                        <p>En esta sección encontrarás los comunicados oficiales emitidos por El Sistema Núcleo Ciudad Guayana sobre eventos importantes, cambios organizacionales, logros destacados y otra información relevante.</p>
+                        <p>Nuestros comunicados de prensa están disponibles para su descarga y pueden ser utilizados por medios de comunicación citando la fuente.</p>
+                        <div class="press-contact">
+                            <h3>Contacto para medios</h3>
+                            <p><i class="fas fa-user"></i> <strong>Coordinador de Prensa:</strong> María Rodríguez</p>
+                            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> prensa@elsistemaciudadguayana.org</p>
+                            <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +58 286-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="press-releases-list animate-on-scroll" data-animation="fadeInRight">
+                        <div class="press-release">
+                            <div class="release-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="release-content">
+                                <h3>Convocatoria para nuevos ingresos 2023</h3>
+                                <p class="release-date">15 de abril de 2023</p>
+                                <p class="release-excerpt">El Sistema Núcleo Ciudad Guayana anuncia la apertura del proceso de inscripción para nuevos estudiantes...</p>
+                                <a href="#" class="download-link"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                        <div class="press-release">
+                            <div class="release-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="release-content">
+                                <h3>Temporada de conciertos 2023</h3>
+                                <p class="release-date">10 de marzo de 2023</p>
+                                <p class="release-excerpt">Anunciamos nuestra programación de conciertos para la temporada 2023, que incluirá presentaciones mensuales...</p>
+                                <a href="#" class="download-link"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                        <div class="press-release">
+                            <div class="release-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="release-content">
+                                <h3>Nombramiento de nuevo director musical</h3>
+                                <p class="release-date">5 de febrero de 2023</p>
+                                <p class="release-excerpt">El Sistema Núcleo Ciudad Guayana se complace en anunciar el nombramiento del Maestro Carlos Mendoza...</p>
+                                <a href="#" class="download-link"><i class="fas fa-download"></i> Descargar PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de galería de prensa -->
+        <section class="press-gallery-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">GALERÍA DE PRENSA</h2>
+                <p class="gallery-intro animate-on-scroll" data-animation="fadeIn" data-delay="200">Imágenes de alta resolución disponibles para medios de comunicación</p>
+                <div class="press-gallery-grid">
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="100">
+                        <img src="/placeholder.svg?height=250&width=400" alt="Orquesta en concierto">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Concierto de Gala 2023</h3>
+                                <p>Teatro de la Ópera de Ciudad Guayana</p>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <img src="/placeholder.svg?height=250&width=400" alt="Director y solista">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Director invitado y solista</h3>
+                                <p>Concierto especial de enero 2023</p>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="300">
+                        <img src="/placeholder.svg?height=250&width=400" alt="Ensayo de la orquesta">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Ensayo general</h3>
+                                <p>Nuevas instalaciones en CVG</p>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <img src="/placeholder.svg?height=250&width=400" alt="Músicos jóvenes">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Jóvenes talentos</h3>
+                                <p>Sección de cuerdas</p>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-note animate-on-scroll" data-animation="fadeIn" data-delay="500">
+                    <div class="note-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="note-content">
+                        <h4>Uso de imágenes</h4>
+                        <p>Estas imágenes están disponibles para uso editorial con el crédito correspondiente: "Cortesía: El Sistema Núcleo Ciudad Guayana". Para otros usos, por favor contacte a nuestro departamento de prensa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de suscripción a boletín -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content animate-on-scroll" data-animation="fadeIn">
+                    <div class="newsletter-text">
+                        <h2>MANTENTE INFORMADO</h2>
+                        <p>Suscríbete a nuestro boletín de noticias para recibir las últimas actualizaciones sobre conciertos, eventos y logros de El Sistema Núcleo Ciudad Guayana.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="subscribe-btn">SUSCRIBIRSE</button>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="privacy-check" required>
+                            <label for="privacy-check">Acepto recibir comunicaciones y he leído la política de privacidad</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

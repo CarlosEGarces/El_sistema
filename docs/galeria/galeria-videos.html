@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Videos - El Sistema Ciudad Guayana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="galeria-videos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+     <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="../img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">GALERÍA DE VIDEOS</h1>
+            <h2 class="page-title-line2">ESCUCHE NUESTROS MEJORES MOMENTOS</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../calendario.html">CALENDARIO</a></li>
+                        <li><a href="../boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="../agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="../agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="../agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="../agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="../agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="../agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="../galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../donaciones.html">DONACIONES</a></li>
+                        <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+        <section class="branding-section">
+            <div class="container logo-social">
+                <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                    <figure class="logo-wrapper">
+                        <img src="../img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                        <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                    </figure>
+                    <div class="logo-text">
+                        <p class="bold">EL SISTEMA</p>
+                        <p>Núcleo Ciudad Guayana</p>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Navegación de la galería -->
+    <section class="gallery-nav-section">
+        <div class="container">
+            <div class="gallery-nav">
+                <a href="galeria-audiovisual.html" class="nav-link">
+                    <i class="fas fa-arrow-left"></i> Volver a la galería
+                </a>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="conciertos">Conciertos</button>
+                    <button class="filter-btn" data-filter="ensayos">Ensayos</button>
+                    <button class="filter-btn" data-filter="entrevistas">Entrevistas</button>
+                    <button class="filter-btn" data-filter="eventos">Eventos</button>
+                </div>
+                <div class="gallery-view-options">
+                    <button class="view-btn active" data-view="grid" aria-label="Vista de cuadrícula">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="Vista de lista">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Video destacado -->
+        <section class="featured-video-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">VIDEO DESTACADO</h2>
+                <div class="featured-video-container animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                    <div class="video-wrapper">
+                        <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                            <img src="/placeholder.svg?height=720&width=1280" alt="Concierto Aniversario - El Sistema Ciudad Guayana">
+                            <div class="play-button-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-video-info">
+                        <h3>Concierto Aniversario - El Sistema Ciudad Guayana</h3>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> 15 de octubre, 2023</span>
+                            <span><i class="far fa-clock"></i> 1:25:30</span>
+                            <span><i class="far fa-eye"></i> 1,245 visualizaciones</span>
+                            <span><i class="fas fa-music"></i> Orquesta Sinfónica Juvenil</span>
+                        </div>
+                        <p class="video-description">
+                            Disfruta del concierto completo de aniversario de El Sistema Ciudad Guayana, donde nuestra Orquesta Sinfónica Juvenil interpretó obras de Tchaikovsky, Beethoven y compositores venezolanos. Un evento memorable que celebra el talento y dedicación de nuestros jóvenes músicos.
+                        </p>
+                        <div class="video-tags">
+                            <span class="tag">Concierto</span>
+                            <span class="tag">Aniversario</span>
+                            <span class="tag">Orquesta Sinfónica</span>
+                            <span class="tag">Música Clásica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de videos -->
+        <section class="videos-gallery-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">TODOS LOS VIDEOS</h2>
+                <div id="videos-container" class="videos-grid">
+                    <!-- Video 1 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="100" data-category="conciertos">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Concierto de Primavera">
+                                <span class="video-duration">12:45</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Concierto de Primavera - Orquesta Infantil</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 21 de marzo, 2023</span>
+                                    <span><i class="far fa-eye"></i> 856 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Presentación de la Orquesta Infantil en el Teatro Angostura, interpretando piezas clásicas y venezolanas.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 2 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="200" data-category="ensayos">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Ensayo General">
+                                <span class="video-duration">8:32</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Ensayo General - Preparación para el Concierto de Gala</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 5 de mayo, 2023</span>
+                                    <span><i class="far fa-eye"></i> 423 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Un vistazo al intenso trabajo de preparación de nuestros músicos antes del Concierto de Gala anual.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 3 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="300" data-category="entrevistas">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Entrevista al Director">
+                                <span class="video-duration">15:20</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Entrevista con el Maestro Carlos Rodríguez</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 12 de junio, 2023</span>
+                                    <span><i class="far fa-eye"></i> 612 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Conversación con nuestro director sobre su trayectoria y visión para El Sistema Ciudad Guayana.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 4 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="400" data-category="eventos">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Inauguración Sede">
+                                <span class="video-duration">22:15</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Inauguración de la Nueva Sede - El Sistema Ciudad Guayana</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 30 de julio, 2023</span>
+                                    <span><i class="far fa-eye"></i> 945 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Ceremonia de inauguración de nuestras nuevas instalaciones con la presencia de autoridades y presentaciones especiales.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 5 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="500" data-category="conciertos">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Concierto Navideño">
+                                <span class="video-duration">18:40</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Concierto Navideño - Coro y Orquesta Juvenil</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 18 de diciembre, 2022</span>
+                                    <span><i class="far fa-eye"></i> 1,102 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Celebración navideña con nuestro Coro y Orquesta Juvenil interpretando villancicos tradicionales y piezas clásicas.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video 6 -->
+                    <article class="video-item animate-on-scroll" data-animation="fadeInUp" data-delay="600" data-category="ensayos">
+                        <div class="video-card">
+                            <div class="video-thumbnail" data-video-id="dQw4w9WgXcQ">
+                                <img src="/placeholder.svg?height=720&width=1280" alt="Clase Magistral">
+                                <span class="video-duration">45:10</span>
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Clase Magistral de Violín con el Maestro Antonio Pérez</h3>
+                                <div class="video-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 8 de agosto, 2023</span>
+                                    <span><i class="far fa-eye"></i> 532 visualizaciones</span>
+                                </div>
+                                <p class="video-description">
+                                    Clase magistral impartida por el reconocido violinista Antonio Pérez para nuestros estudiantes avanzados.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Botón de cargar más -->
+                <div class="load-more-container">
+                    <button id="load-more-btn" class="load-more-btn">
+                        <span>CARGAR MÁS VIDEOS</span>
+                        <i class="fas fa-spinner fa-spin" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para reproducir video -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="video-frame" src="/placeholder.svg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../chatbot-button.js"></script>
+    <script src="galeria-videos.js"></script>
+</body>
+</html>

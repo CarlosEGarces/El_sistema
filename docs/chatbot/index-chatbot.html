@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot El Sistema</title>
+    <link rel="stylesheet" href="style-chatbot.css">
+</head>
+<body>
+    <div id="chatbot-container">
+        <div class="header">
+            <img src="th.jpg" alt="Perfil del Bot" class="profile-img">
+            <span class="header-text">Tchaibotsky: Asistente Virtual</span>
+            <span class="close-button" id="close-button">&times;</span>
+        </div>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="bot-message"><span class="emoji">🎻</span> ¡Hola! Soy Tchaibotsky, el asistente virtual de El Sistema. ¿En qué puedo ayudarte hoy?</div>
+            </div>
+            
+            <!-- Pestaña desplegable de botones rápidos -->
+            <div class="quick-buttons-tab">
+                <div class="quick-buttons-header" id="quick-buttons-toggle">
+                    <span class="tab-text">💡 Preguntas Rápidas</span>
+                    <span class="tab-arrow" id="tab-arrow">▼</span>
+                </div>
+                <div class="quick-buttons-container" id="quick-buttons-container">
+                    <div class="quick-buttons-scroll">
+                        <button class="quick-button" data-question="Hola">👋 Saludar</button>
+                        <button class="quick-button" data-question="¿Quién eres?">🤖 ¿Quién eres?</button>
+                        <button class="quick-button" data-question="¿Qué puedes hacer?">💡 Ayuda</button>
+                        <button class="quick-button" data-question="Programas">📚 Programas</button>
+                        <button class="quick-button" data-question="Orquesta juvenil">🎻 Orquestas</button>
+                        <button class="quick-button" data-question="Programa Alma Llanera">🪕 Alma Llanera</button>
+                        <button class="quick-button" data-question="Programa Coral">🎵 Coral</button>
+                        <button class="quick-button" data-question="Iniciación Musical">📚 Iniciación</button>
+                        <button class="quick-button" data-question="Ubicación">📍 Ubicación</button>
+                        <button class="quick-button" data-question="Eventos">📅 Eventos</button>
+                        <button class="quick-button" data-question="Donaciones">💝 Donaciones</button>
+                        <button class="quick-button" data-question="Cuéntame un chiste">😂 Chiste</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar los archivos JavaScript -->
+    <script src="chatbot.js"></script>
+    <script src="trivia-ruleta.js"></script>
+    <script src="instrumento-test.js"></script>
+    <script>
+        // Detectar el modo oscuro/claro de la página principal
+        function detectTheme() {
+            // Intentar comunicarse con la página principal para obtener el tema
+            window.parent.postMessage("getTheme", "*");
+        }
+        
+        // Escuchar mensajes de la página principal
+        window.addEventListener("message", (event) => {
+            if (event.data === "closeChatbot") {
+                // Manejar el cierre del chatbot
+            } else if (event.data === "light-mode" || event.data === "dark-mode") {
+                // Aplicar el tema recibido
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (event.data === "dark-mode") {
+                    chatbotContainer.classList.add("dark-mode");
+                } else {
+                    chatbotContainer.classList.remove("dark-mode");
+                }
+            }
+        });
+        
+        // Detectar el tema al cargar
+        detectTheme();
+    </script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+/* Estilos específicos para la página de boletos */
+
+/* Variables de colores específicos para esta página */
+:root {
+  --purple: #8a2be2;
+  --gold: #ffd700;
+  --light-purple: rgba(138, 43, 226, 0.2);
+  --light-gold: rgba(255, 215, 0, 0.2);
+  --header-gradient-color1: #ffd700; /* Color inicial del gradiente */
+  --header-gradient-color2: #8a2be2; /* Color final del gradiente */
+  --title-color: white; /* Color del texto del título */
+  --title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Header con gradiente personalizable */
+.page-header-gradient {
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, var(--header-gradient-color1), var(--header-gradient-color2));
+  padding: var(--spacing-xl, 3rem) 0;
+}
+
+/* ESTILOS PARA EL LOGO */
+.page-logo {
+  max-width: 90%;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  transition: all 1.8s ease;
+}
+
+/* Estado cuando el logo se desvanece */
+.page-logo.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(2px);
+  visibility: hidden;
+}
+
+/* ESTILOS PARA EL TÍTULO */
+.page-title-container {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: all 1.5s ease;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(30px) scale(0.9);
+  width: 100%;
+}
+
+/* Estado cuando el título aparece */
+.page-title-container.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0) scale(1);
+}
+
+/* Estilos para las líneas del título */
+.page-title-line1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.page-title-line2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .page-header-gradient {
+    min-height: 50vh;
+    max-height: 70vh;
+  }
+
+  .page-logo {
+    max-height: 35vh;
+  }
+
+  .page-title-line1 {
+    font-size: 3rem;
+  }
+
+  .page-title-line2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-gradient {
+    min-height: 40vh;
+    max-height: 60vh;
+  }
+
+  .page-logo {
+    max-height: 30vh;
+    max-width: 95%;
+  }
+
+  .page-title-line1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .page-title-line2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-gradient {
+    min-height: 35vh;
+    max-height: 50vh;
+  }
+
+  .page-logo {
+    max-height: 25vh;
+  }
+
+  .page-title-line1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .page-title-line2 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Estilos para la navegación activa */
+.nav-menu a.active {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* Sección de información sobre boletos gratuitos */
+.free-tickets-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--section-bg);
+}
+
+.free-tickets-section .content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.free-tickets-section .intro-text {
+  flex: 2;
+}
+
+.free-tickets-section p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.free-tickets-section .highlight {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.tickets-icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+/* Sección de invitación al calendario */
+.calendar-invitation-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+}
+
+.calendar-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.calendar-icon {
+  font-size: 8rem;
+  color: var(--purple);
+  opacity: 0.8;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-text {
+  flex: 2;
+}
+
+.calendar-text p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.calendar-btn {
+  display: inline-block;
+  background: linear-gradient(to right, var(--purple), var(--gold));
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: var(--spacing-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-note {
+  max-width: 800px;
+  margin: var(--spacing-lg) auto 0;
+  background-color: var(--section-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-md);
+  border-left: 4px solid var(--gold);
+}
+
+.note-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.note-content h4 {
+  font-family: var(--font-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.1rem;
+  color: var(--purple);
+}
+
+.note-content p {
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Sección de información para asistentes */
+.attendance-info-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--section-bg);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.info-card {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--gold);
+}
+
+.info-card:nth-child(even) .info-icon {
+  color: var(--purple);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-secondary);
+  color: var(--purple);
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Sección de apoyo y donaciones */
+.support-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--light-purple), var(--light-gold));
+}
+
+.support-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.support-content p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.support-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.benefit {
+  background-color: var(--section-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: var(--purple);
+  margin-bottom: var(--spacing-sm);
+}
+
+.benefit p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.donation-cta {
+  margin-top: var(--spacing-xl);
+}
+
+.donation-cta p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+}
+
+.donate-btn {
+  display: inline-block;
+  background: linear-gradient(to right, var(--purple), var(--gold));
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de testimonios */
+.testimonials-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--light-purple), var(--light-gold));
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.testimonials-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.testimonial {
+  display: none;
+  padding: var(--spacing-lg);
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-content {
+  background-color: var(--section-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 5rem;
+  color: var(--purple);
+  font-family: serif;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+}
+
+.testimonial-author {
+  text-align: right;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.author-role {
+  font-size: 0.8rem;
+  color: var(--purple);
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-md);
+  gap: var(--spacing-xs);
+}
+
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-dot.active {
+  background-color: var(--purple);
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tickets-header-gradient h1 {
+    font-size: 2.5rem;
+  }
+
+  .tickets-header-gradient h2 {
+    font-size: 1.25rem;
+  }
+
+  .free-tickets-section .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .calendar-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .calendar-note {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tickets-header-gradient h1 {
+    font-size: 2rem;
+  }
+
+  .tickets-header-gradient h2 {
+    font-size: 1rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-content p {
+    font-size: 1rem;
+  }
+}

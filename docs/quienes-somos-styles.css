@@ -1,0 +1,445 @@
+:root {
+  --header-gradient-color1: #00addc; /* Color inicial del gradiente */
+  --header-gradient-color2: #8c189b; /* Color final del gradiente */
+  --title-color: white; /* Color del texto del título */
+  --title-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Header con gradiente personalizable */
+.page-header-gradient {
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, var(--header-gradient-color1), var(--header-gradient-color2));
+  padding: var(--spacing-xl, 3rem) 0;
+}
+
+/* ESTILOS PARA EL LOGO */
+.page-logo {
+  max-width: 90%;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  transition: all 1.8s ease;
+}
+
+/* Estado cuando el logo se desvanece */
+.page-logo.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(2px);
+  visibility: hidden;
+}
+
+/* ESTILOS PARA EL TÍTULO */
+.page-title-container {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: all 1.5s ease;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(30px) scale(0.9);
+  width: 100%;
+}
+
+/* Estado cuando el título aparece */
+.page-title-container.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0) scale(1);
+}
+
+/* Estilos para las líneas del título */
+.page-title-line1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.page-title-line2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .page-header-gradient {
+    min-height: 50vh;
+    max-height: 70vh;
+  }
+
+  .page-logo {
+    max-height: 35vh;
+  }
+
+  .page-title-line1 {
+    font-size: 3rem;
+  }
+
+  .page-title-line2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-gradient {
+    min-height: 40vh;
+    max-height: 60vh;
+  }
+
+  .page-logo {
+    max-height: 30vh;
+    max-width: 95%;
+  }
+
+  .page-title-line1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .page-title-line2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-gradient {
+    min-height: 35vh;
+    max-height: 50vh;
+  }
+
+  .page-logo {
+    max-height: 25vh;
+  }
+
+  .page-title-line1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .page-title-line2 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Historia */
+.historia {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--section-bg);
+}
+
+.historia-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.historia-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.historia-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.historia-timeline {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.historia-timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: var(--magenta);
+  left: 20px;
+  top: 0;
+}
+
+.timeline-item {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding-left: 60px;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--magenta);
+  border-radius: 50%;
+  left: 12px;
+  top: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--magenta);
+}
+
+/* Misión y Visión */
+.mision-vision {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+}
+
+.mision-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.mision,
+.vision {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease;
+}
+
+.mision:hover,
+.vision:hover {
+  transform: translateY(-10px);
+}
+
+.mision p,
+.vision p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.icon-container {
+  text-align: center;
+}
+
+.icon-container i {
+  font-size: 3rem;
+  color: var(--magenta);
+  opacity: 0.2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-color);
+}
+
+.separator {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(to right, var(--magenta), var(--blue));
+  margin: 0 auto;
+}
+
+/* Valores */
+.valores {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--section-bg);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.valor-card {
+  background-color: var(--bg-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform var(--transition-speed) ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-10px);
+}
+
+.valor-icon {
+  margin-bottom: var(--spacing-md);
+}
+
+.valor-icon i {
+  font-size: 2.5rem;
+  color: var(--magenta);
+}
+
+.valor-card h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+}
+
+.valor-card p {
+  line-height: 1.6;
+}
+
+/* Equipo */
+.equipo {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto var(--spacing-lg);
+}
+
+.miembro-card {
+  background-color: var(--section-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed) ease;
+}
+
+.miembro-card:hover {
+  transform: translateY(-10px);
+}
+
+.miembro-img {
+  height: 250px;
+  overflow: hidden;
+}
+
+.miembro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.miembro-card:hover .miembro-img img {
+  transform: scale(1.1);
+}
+
+.miembro-card h3 {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs);
+  font-size: 1.3rem;
+}
+
+.miembro-card .cargo {
+  padding: 0 var(--spacing-md);
+  color: var(--magenta);
+  font-weight: bold;
+  margin-bottom: var(--spacing-xs);
+}
+
+.miembro-card .bio {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  line-height: 1.5;
+}
+
+.equipo-completo {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Reconocimientos */
+.reconocimientos {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--section-bg);
+}
+
+.reconocimientos-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.reconocimiento {
+  background-color: var(--bg-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 300px;
+  transition: transform var(--transition-speed) ease;
+}
+
+.reconocimiento:hover {
+  transform: translateY(-10px);
+}
+
+.reconocimiento-icon {
+  margin-bottom: var(--spacing-md);
+}
+
+.reconocimiento-icon i {
+  font-size: 3rem;
+  color: var(--magenta);
+}
+
+.reconocimiento h3 {
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.5rem;
+}
+
+.reconocimiento p {
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .historia-content {
+    flex-direction: column;
+  }
+
+  .mision-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .reconocimiento {
+    width: 100%;
+  }
+}

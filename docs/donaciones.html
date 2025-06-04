@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donaciones-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">DONACIONES</h1>
+            <h2 class="page-title-line2">APOYA NUESTRO PROYECTO</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+    <section class="branding-section">
+        <div class="container logo-social">
+            <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                <figure class="logo-wrapper">
+                    <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                    <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                </figure>
+                <div class="logo-text">
+                    <p class="bold">EL SISTEMA</p>
+                    <p>Núcleo Ciudad Guayana</p>
+                </div>
+            </div>
+            <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de introducción a las donaciones -->
+        <section class="donation-intro-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="intro-text animate-on-scroll" data-animation="fadeIn">
+                        <h2 class="section-title">TU APOYO TRANSFORMA VIDAS</h2>
+                        <p>El Sistema Nacional de Orquestas y Coros Juveniles e Infantiles de Venezuela es un proyecto social y cultural que ha transformado la vida de miles de niños y jóvenes a través de la música.</p>
+                        <p>Tu donación nos permite continuar ofreciendo educación musical gratuita, instrumentos, y oportunidades de desarrollo artístico a niños y jóvenes de Ciudad Guayana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de impacto de donaciones -->
+        <section class="donation-impact-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">EL IMPACTO DE TU DONACIÓN</h2>
+                <div class="impact-grid">
+                    <div class="impact-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="impact-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Instrumentos</h3>
+                        <p>Proporcionamos instrumentos musicales a niños que de otra manera no tendrían acceso a ellos.</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educación</h3>
+                        <p>Ofrecemos clases de música gratuitas impartidas por profesionales altamente calificados.</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="impact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Comunidad</h3>
+                        <p>Creamos espacios seguros donde los jóvenes pueden desarrollar habilidades sociales y valores.</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="impact-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3>Cultura</h3>
+                        <p>Promovemos el acceso a la cultura y las artes en comunidades con recursos limitados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de testimonios -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">TESTIMONIOS</h2>
+                <div class="testimonials-slider animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"El Sistema cambió mi vida. Me dio un propósito y me enseñó que con disciplina y pasión puedo lograr cualquier cosa que me proponga."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">María González</p>
+                                <p class="author-role">Ex-alumna, violinista</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Ver a mi hijo crecer como músico y como persona gracias a El Sistema ha sido una de las mayores alegrías de mi vida. Estoy eternamente agradecido."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">Carlos Rodríguez</p>
+                                <p class="author-role">Padre de alumno</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"El Sistema no solo enseña música, enseña valores, disciplina y trabajo en equipo. Es una escuela de vida."</p>
+                            <div class="testimonial-author">
+                                <p class="author-name">Ana Martínez</p>
+                                <p class="author-role">Profesora de violonchelo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-dot active" data-index="0" aria-label="Testimonio 1"></button>
+                    <button class="testimonial-dot" data-index="1" aria-label="Testimonio 2"></button>
+                    <button class="testimonial-dot" data-index="2" aria-label="Testimonio 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de donación con códigos QR -->
+        <section class="qr-donation-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">CÓMO DONAR</h2>
+                <p class="donation-instructions animate-on-scroll" data-animation="fadeIn" data-delay="100">Escanea cualquiera de los siguientes códigos QR con tu dispositivo móvil para realizar una donación directa a El Sistema Núcleo Ciudad Guayana a través de tu método de pago preferido.</p>
+                
+                <div class="qr-grid">
+                    <!-- Método de pago 1: PayPal -->
+                    <div class="qr-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="qr-header orange-gradient">
+                            <h3>PAYPAL</h3>
+                        </div>
+                        <div class="qr-content">
+                            <div class="qr-image">
+                                <img src="/placeholder.svg?height=200&width=200" alt="Código QR para donación por PayPal">
+                            </div>
+                            <p class="qr-description">Realiza tu donación de forma segura a través de PayPal.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Método de pago 2: Pagomóvil -->
+                    <div class="qr-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="qr-header green-gradient">
+                            <h3>PAGOMÓVIL</h3>
+                        </div>
+                        <div class="qr-content">
+                            <div class="qr-image">
+                                <img src="/placeholder.svg?height=200&width=200" alt="Código QR para donación por Pagomóvil">
+                            </div>
+                            <p class="qr-description">Realiza tu donación a través de Pagomóvil escaneando este código.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Método de pago 3: Transferencia Bancaria -->
+                    <div class="qr-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="qr-header orange-green-gradient">
+                            <h3>TRANSFERENCIA BANCARIA</h3>
+                        </div>
+                        <div class="qr-content">
+                            <div class="qr-image">
+                                <img src="/placeholder.svg?height=200&width=200" alt="Código QR para transferencia bancaria">
+                            </div>
+                            <p class="qr-description">Realiza tu donación mediante transferencia bancaria a nuestra cuenta.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-note animate-on-scroll" data-animation="fadeIn" data-delay="500">
+                    <div class="note-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="note-content">
+                        <h4>Importante</h4>
+                        <p>Todas las donaciones son procesadas de forma segura directamente por nuestras instituciones bancarias asociadas. El Sistema Núcleo Ciudad Guayana no almacena ni procesa información financiera en este sitio web.</p>
+                        <p>Para donaciones corporativas o contribuciones mayores, por favor contacta directamente a nuestro departamento de desarrollo en <a href="mailto:donaciones@elsistemaciudadguayana.org">donaciones@elsistemaciudadguayana.org</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de agradecimiento -->
+        <section class="thank-you-section">
+            <div class="container">
+                <div class="thank-you-content animate-on-scroll" data-animation="fadeIn">
+                    <h2>GRACIAS POR TU APOYO</h2>
+                    <p>Cada donación, sin importar su tamaño, hace una diferencia significativa en nuestra misión de transformar vidas a través de la música.</p>
+                    <div class="donor-wall">
+                        <h3>MURO DE DONANTES</h3>
+                        <div class="donor-list">
+                            <span>Fundación Cultural Bolívar</span>
+                            <span>Familia Rodríguez</span>
+                            <span>Empresas Guayana</span>
+                            <span>María A. González</span>
+                            <span>Carlos Pérez</span>
+                            <span>Fundación Artes</span>
+                            <span>Ana Martínez</span>
+                            <span>Juan Domínguez</span>
+                            <span>Y muchos más...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="galeria-audiovisual.css">
+    <link rel="stylesheet" href="galeria-imagenes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="../img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">GALERÍA DE IMÁGENES</h1>
+            <h2 class="page-title-line2">RECORDEMOS NUESTROS MEJORES MOMENTOS</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../calendario.html">CALENDARIO</a></li>
+                        <li><a href="../boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                 <li class="nav-item dropdown">
+                    <a href="../agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="../agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="../agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="../agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="../agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="../agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="../galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../donaciones.html">DONACIONES</a></li>
+                        <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Sección de logo y redes sociales -->
+        <section class="branding-section">
+            <div class="container logo-social">
+                <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                    <figure class="logo-wrapper">
+                        <img src="../img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                        <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                    </figure>
+                    <div class="logo-text">
+                        <p class="bold">EL SISTEMA</p>
+                        <p>Núcleo Ciudad Guayana</p>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <main id="contenido-principal">
+        <!-- Barra de navegación de la galería -->
+        <section class="gallery-nav-section">
+            <div class="container">
+                <div class="gallery-nav animate-on-scroll" data-animation="fadeIn">
+                    <a href="galeria-audiovisual.html" class="nav-link"><i class="fas fa-arrow-left"></i> Volver a Galería</a>
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="conciertos">Conciertos</button>
+                        <button class="filter-btn" data-filter="ensayos">Ensayos</button>
+                        <button class="filter-btn" data-filter="eventos">Eventos</button>
+                        <button class="filter-btn" data-filter="comunidad">Comunidad</button>
+                    </div>
+                    <div class="gallery-view-options">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="masonry"><i class="fas fa-th-large"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de imágenes -->
+        <section class="images-gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Imagen 1 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="100" data-category="conciertos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Concierto de gala">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Concierto de Gala 2023</h3>
+                                    <p>Teatro de la Ópera de Ciudad Guayana</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 2 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="200" data-category="ensayos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Ensayo de cuerdas">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Ensayo de Cuerdas</h3>
+                                    <p>Preparación para el concierto de temporada</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 3 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="300" data-category="eventos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Clase magistral">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Clase Magistral</h3>
+                                    <p>Con el maestro invitado internacional</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 4 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="400" data-category="comunidad">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Música en la comunidad">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Música en la Comunidad</h3>
+                                    <p>Llevando la música a todos los rincones</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 5 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="500" data-category="conciertos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Orquesta sinfónica">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Orquesta Sinfónica</h3>
+                                    <p>Concierto de temporada 2023</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 6 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="600" data-category="ensayos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Ensayo de vientos">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Ensayo de Vientos</h3>
+                                    <p>Sección de vientos preparándose para el concierto</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 7 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="700" data-category="eventos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Ceremonia de graduación">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Ceremonia de Graduación</h3>
+                                    <p>Nuevos músicos profesionales</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 8 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="800" data-category="comunidad">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Taller comunitario">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Taller Comunitario</h3>
+                                    <p>Enseñando música a niños de la comunidad</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 9 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="900" data-category="conciertos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Concierto al aire libre">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Concierto al Aire Libre</h3>
+                                    <p>Plaza central de Ciudad Guayana</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 10 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="1000" data-category="ensayos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Ensayo de percusión">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Ensayo de Percusión</h3>
+                                    <p>Sección de percusión en acción</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 11 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="1100" data-category="eventos">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Festival de música">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Festival de Música</h3>
+                                    <p>Celebración anual de la música clásica</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1200&width=1800">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 12 -->
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="1200" data-category="comunidad">
+                        <div class="gallery-image">
+                            <img src="/placeholder.svg?height=600&width=400" alt="Proyecto social">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Proyecto Social</h3>
+                                    <p>Impacto de la música en la comunidad</p>
+                                    <button class="expand-btn" data-image="/placeholder.svg?height=1800&width=1200">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón de cargar más -->
+                <div class="load-more-container animate-on-scroll" data-animation="fadeIn">
+                    <button id="load-more-btn" class="load-more-btn">
+                        <span>CARGAR MÁS</span>
+                        <i class="fas fa-spinner fa-spin" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal para ver imagen ampliada -->
+        <div id="image-modal" class="image-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <img id="modal-image" src="/placeholder.svg" alt="Imagen ampliada">
+                <div class="modal-caption">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                </div>
+                <button class="modal-nav prev-image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="modal-nav next-image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="galeria-imagenes.js"></script>
+    <script src="../script.js"></script>
+    <script src="../chatbot-button.js"></script>
+</body>
+</html>

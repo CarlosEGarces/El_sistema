@@ -1,0 +1,1103 @@
+/* Estilos generales para todas las páginas de agrupaciones */
+:root {
+  /* Colores principales del brandbook */
+  --magenta: #e70095;
+  --azul: #00addc;
+  --verde: #72d54a;
+  --naranja: #ff6b00;
+  --blanco: #ffffff;
+
+  /* Colores secundarios del brandbook */
+  --azul-oscuro: #022169;
+  --turquesa: #00c4b3;
+  --morado: #8c189b;
+  --negro: #1d1d1b;
+  --gris-claro: #f5f5f5;
+  --gris-medio: #e0e0e0;
+
+  /* Variables para gradientes */
+  --gradient-magenta-azul: linear-gradient(135deg, var(--magenta), var(--azul));
+  --gradient-azul-verde: linear-gradient(135deg, var(--azul), var(--verde));
+  --gradient-verde-naranja: linear-gradient(135deg, var(--verde), var(--naranja));
+  --gradient-naranja-magenta: linear-gradient(135deg, var(--naranja), var(--magenta));
+  --gradient-azul-oscuro-morado: linear-gradient(135deg, var(--azul-oscuro), var(--morado));
+  --gradient-morado-turquesa: linear-gradient(135deg, var(--morado), var(--turquesa));
+
+  /* Transiciones */
+  --transition-standard: all 0.3s ease;
+}
+
+/* Estilos para el header principal */
+.header-gradient {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--magenta), var(--azul), var(--verde), var(--naranja));
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--blanco);
+  overflow: hidden;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.header-gradient h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-gradient h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-description {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.small-text {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para la sección de branding */
+.branding-section {
+  padding: 2rem 0;
+  background-color: var(--gris-claro);
+}
+
+.logo-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.sistema-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-family: "Oswald", sans-serif;
+}
+
+.logo-text .bold {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--negro);
+  color: var(--blanco);
+  font-size: 1.2rem;
+  transition: var(--transition-standard);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a:nth-child(1) .social-icon {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icons a:nth-child(2) .social-icon {
+  background-color: #3b5998;
+}
+
+.social-icons a:nth-child(3) .social-icon {
+  background-color: #1da1f2;
+}
+
+.social-icons a:nth-child(4) .social-icon {
+  background-color: #ff0000;
+}
+
+/* Estilos para la sección de introducción */
+.intro-section {
+  padding: 4rem 0;
+  background-color: var(--blanco);
+}
+
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--negro);
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--magenta), var(--azul));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-text-container {
+  text-align: center;
+}
+
+.intro-text {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--negro);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--gris-claro);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+  transition: var(--transition-standard);
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--magenta), var(--azul));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  color: var(--negro);
+}
+
+/* Estilos para la sección de agrupaciones */
+.agrupaciones-grid {
+  padding: 4rem 0;
+  background-color: var(--gris-claro);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.agrupacion-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--blanco);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-standard);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.agrupacion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  opacity: 0.2;
+  transition: var(--transition-standard);
+}
+
+.agrupacion-card:hover .card-icon {
+  transform: scale(1.2) rotate(10deg);
+  opacity: 0.3;
+}
+
+.card-content {
+  padding: 2.5rem;
+  z-index: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.agrupacion-card h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.agrupacion-card p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transition-standard);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.btn.white {
+  background-color: var(--blanco);
+  color: var(--negro);
+  border: 2px solid var(--blanco);
+}
+
+.btn.white:hover {
+  background-color: transparent;
+  color: var(--blanco);
+}
+
+.btn-primary {
+  background-color: var(--magenta);
+  color: var(--blanco);
+  border: 2px solid var(--magenta);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--magenta);
+}
+
+.card-decoration {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+/* Gradientes para cada agrupación */
+.magenta-gradient {
+  background: linear-gradient(135deg, var(--magenta), var(--morado));
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, var(--azul), var(--turquesa));
+}
+
+.green-gradient {
+  background: linear-gradient(135deg, var(--verde), var(--azul));
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, var(--naranja), var(--magenta));
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, var(--morado), var(--magenta));
+}
+
+.darkblue-gradient {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--morado));
+}
+
+/* Estilos para la sección de impacto */
+.impact-section {
+  padding: 4rem 0;
+  background-color: var(--blanco);
+}
+
+.impact-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.impact-image {
+  flex: 1;
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.impact-text {
+  flex: 1;
+}
+
+.impact-text h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+}
+
+.impact-text p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.impact-list li {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.impact-list li i {
+  color: var(--magenta);
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* Estilos para la sección de cita */
+.quote-section {
+  padding: 5rem 0;
+  background-color: var(--gris-claro);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+  font-style: italic;
+}
+
+blockquote footer {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  color: var(--magenta);
+}
+
+/* Estilos para la sección de eventos */
+.events-section {
+  padding: 4rem 0;
+  background-color: var(--blanco);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  display: flex;
+  background-color: var(--gris-claro);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-standard);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  min-width: 80px;
+  background: linear-gradient(to bottom, var(--magenta), var(--morado));
+  color: var(--blanco);
+}
+
+.event-day {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.event-month {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.event-details {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.event-details h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--negro);
+}
+
+.event-location,
+.event-time {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--negro);
+  display: flex;
+  align-items: center;
+}
+
+.event-location i,
+.event-time i {
+  margin-right: 0.5rem;
+  color: var(--magenta);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: var(--transition-standard);
+}
+
+.btn-secondary:hover {
+  background-color: var(--azul-oscuro);
+}
+
+.events-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+  padding: 4rem 0;
+  background-color: var(--gris-claro);
+}
+
+.contact-content {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--magenta);
+  margin-right: 1rem;
+  flex-shrink: 0;
+  width: 30px;
+  text-align: center;
+}
+
+.contact-item p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--negro);
+}
+
+.contact-form-container {
+  flex: 1;
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--negro);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--gris-medio);
+  border-radius: 5px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Estilos para el encabezado de agrupaciones específicas */
+.agrupacion-header {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  overflow: hidden;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.agrupacion-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.agrupacion-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.agrupacion-header h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.agrupacion-header p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para la sección de contenido */
+.agrupacion-content {
+  padding: 4rem 0;
+}
+
+.agrupacion-section {
+  margin-bottom: 3rem;
+}
+
+.agrupacion-section h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--negro);
+  position: relative;
+}
+
+.agrupacion-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--magenta), var(--azul));
+  margin: 1rem auto 2rem;
+  border-radius: 2px;
+}
+
+.agrupacion-section p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+}
+
+.two-columns {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.column {
+  flex: 1;
+}
+
+.column h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--negro);
+}
+
+.column h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+  color: var(--negro);
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-standard);
+}
+
+.column img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.column ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.column li {
+  font-family: "Noto Sans TC", sans-serif;
+  margin-bottom: 0.8rem;
+  color: var(--negro);
+}
+
+.gradient-bar {
+  height: 4px;
+  width: 100px;
+  margin: 3rem auto;
+  border-radius: 2px;
+}
+
+/* Estilos para la sección de profesores */
+.profesores-section {
+  background-color: var(--gris-claro);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-standard);
+}
+
+.profesores-section:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.profesores-section h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--negro);
+}
+
+.profesores-list {
+  list-style: none;
+  padding: 0;
+}
+
+.profesores-list li {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--negro);
+  transition: var(--transition-standard);
+}
+
+.profesores-list li:hover {
+  transform: translateX(5px);
+}
+
+.profesores-list li::before {
+  content: "♪";
+  position: absolute;
+  left: 0;
+  color: var(--magenta);
+  font-size: 1.2rem;
+}
+
+/* Animaciones */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animation="fadeIn"].animated {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+[data-animation="fadeInUp"].animated {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+[data-animation="fadeInDown"].animated {
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+[data-animation="fadeInLeft"].animated {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+[data-animation="fadeInRight"].animated {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .header-gradient h1 {
+    font-size: 3rem;
+  }
+
+  .header-gradient h2 {
+    font-size: 1.8rem;
+  }
+
+  .two-columns,
+  .impact-content,
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .agrupacion-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .stats-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stat-box {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-gradient {
+    min-height: 300px;
+    padding: 3rem 0;
+  }
+
+  .header-gradient h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-gradient h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-description {
+    font-size: 1rem;
+  }
+
+  .logo-social {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .agrupacion-header h1 {
+    font-size: 2rem;
+  }
+
+  .agrupacion-header p {
+    font-size: 1rem;
+  }
+
+  .agrupacion-section h2 {
+    font-size: 2rem;
+  }
+
+  .column h3 {
+    font-size: 1.5rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  blockquote p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-gradient {
+    min-height: 250px;
+  }
+
+  .header-gradient h1 {
+    font-size: 2rem;
+  }
+
+  .header-gradient h2 {
+    font-size: 1.2rem;
+  }
+
+  .agrupacion-header {
+    min-height: 200px;
+    padding: 3rem 0;
+  }
+
+  .agrupacion-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  blockquote p {
+    font-size: 1.2rem;
+  }
+}

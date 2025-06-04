@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - El Sistema Núcleo Ciudad Guayana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comunidad-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header principal con animación de logo a título -->
+    <header class="page-header-gradient">
+    <div class="container text-center header-content">
+        <!-- Logo que aparece primero y luego desaparece -->
+        <img id="page-logo" 
+             src="img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+             alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+             loading="lazy" 
+             class="page-logo">
+        
+        <!-- Título que aparece después del logo -->
+        <div id="page-title" class="page-title-container">
+            <h1 class="page-title-line1">PATROCINANTES</h1>
+            <h2 class="page-title-line2">QUIENES HACEN POSIBLE NUESTRA LABOR</h2>
+        </div>
+    </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="calendario.html">CALENDARIO</a></li>
+                        <li><a href="boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="agrupaciones/agrupaciones.html" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="agrupaciones/iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="agrupaciones/alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="agrupaciones/simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="agrupaciones/programa-coral.html">Programa Coral</a></li>
+                        <li><a href="agrupaciones/orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="agrupaciones/orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#galeria" class="dropdown-toggle">GALERIA AUDIOVISUAL</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria/galeria-imagenes.html">GALERIA IMÁGENES</a></li>
+                        <li><a href="galeria/galeria-videos.html">GALERÍA VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="donaciones.html">DONACIONES</a></li>
+                        <li><a href="patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de logo y redes sociales -->
+        <section class="branding-section">
+            <div class="container logo-social">
+                <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                    <figure class="logo-wrapper">
+                        <img src="img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                        <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                    </figure>
+                    <div class="logo-text">
+                        <p class="bold">EL SISTEMA</p>
+                        <p>Núcleo Ciudad Guayana</p>
+                    </div>
+                </div>
+                <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de impacto en la comunidad -->
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">IMPACTO EN LA COMUNIDAD</h2>
+                <div class="impact-content">
+                    <div class="impact-text animate-on-scroll" data-animation="fadeInLeft">
+                        <p>Desde su fundación en Ciudad Guayana, El Sistema ha transformado la vida de miles de niños, jóvenes y familias a través del poder de la música. Más que una escuela de música, somos un programa de desarrollo social que utiliza la formación musical como herramienta para el cambio positivo.</p>
+                        <p>Nuestro núcleo ha creado un espacio seguro donde niños y jóvenes pueden desarrollar no solo habilidades musicales, sino también valores fundamentales como disciplina, trabajo en equipo, respeto y perseverancia.</p>
+                        <p>A través de nuestros programas, hemos logrado:</p>
+                        <ul class="impact-list">
+                            <li><span class="highlight">Reducir la deserción escolar</span> en las comunidades donde trabajamos</li>
+                            <li>Ofrecer una <span class="highlight">alternativa positiva</span> a los jóvenes en situación de vulnerabilidad</li>
+                            <li>Crear <span class="highlight">puentes culturales</span> entre diferentes sectores de la sociedad</li>
+                            <li>Formar <span class="highlight">ciudadanos integrales</span> comprometidos con su comunidad</li>
+                        </ul>
+                    </div>
+                    <div class="impact-image animate-on-scroll" data-animation="fadeInRight">
+                        <img src="/placeholder.svg?height=400&width=600" alt="orquesta">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de estadísticas de impacto -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Niños y jóvenes beneficiados</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Años transformando vidas</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Comunidades alcanzadas</div>
+                    </div>
+                    <div class="stat-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Mejora en rendimiento académico</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de importancia para la comunidad -->
+        <section class="importance-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">IMPORTANCIA PARA NUESTRA COMUNIDAD</h2>
+                <div class="importance-content">
+                    <div class="importance-image animate-on-scroll" data-animation="fadeInLeft">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Concierto">
+                    </div>
+                    <div class="importance-text animate-on-scroll" data-animation="fadeInRight">
+                        <p>En Ciudad Guayana, El Sistema representa mucho más que música. Somos un pilar fundamental para el desarrollo cultural y social de nuestra región, ofreciendo:</p>
+                        
+                        <div class="importance-card">
+                            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="card-content">
+                                <h3>Educación de calidad</h3>
+                                <p>Brindamos formación musical de excelencia, accesible para todos sin importar su condición socioeconómica.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="importance-card">
+                            <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                            <div class="card-content">
+                                <h3>Inclusión social</h3>
+                                <p>Nuestras orquestas y coros son espacios donde se disuelven las barreras sociales, económicas y culturales.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="importance-card">
+                            <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                            <div class="card-content">
+                                <h3>Patrimonio cultural</h3>
+                                <p>Preservamos y difundimos el patrimonio musical venezolano y universal, enriqueciendo la identidad cultural de nuestra ciudad.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="importance-card">
+                            <div class="card-icon"><i class="fas fa-heart"></i></div>
+                            <div class="card-content">
+                                <h3>Esperanza y orgullo</h3>
+                                <p>Nuestros músicos son ejemplo de superación y motivo de orgullo para toda la comunidad guayanesa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Programa Simón Bolívar -->
+        <section class="simon-bolivar-section">
+            <div class="container">
+                <div class="sb-content">
+                    <div class="sb-text animate-on-scroll" data-animation="fadeInLeft">
+                        <h2 class="section-title">EL PROGRAMA SIMÓN BOLÍVAR</h2>
+                        <p>El Sistema Nacional de Orquestas y Coros Juveniles e Infantiles de Venezuela, fundado por el Maestro José Antonio Abreu en 1975, ha sido reconocido mundialmente como un modelo de educación musical y transformación social.</p>
+                        <p>La Orquesta Sinfónica Simón Bolívar, buque insignia de El Sistema, ha llevado el talento venezolano a los escenarios más prestigiosos del mundo, demostrando el poder transformador de la música.</p>
+                        <p>Nuestro núcleo en Ciudad Guayana forma parte integral de este movimiento nacional, compartiendo su filosofía y metodología:</p>
+                        <ul class="sb-principles">
+                            <li><span class="highlight">Tocar y luchar</span> - Nuestro lema que representa la perseverancia y el esfuerzo</li>
+                            <li><span class="highlight">La orquesta como sociedad ideal</span> - Un espacio donde cada individuo es importante para el conjunto</li>
+                            <li><span class="highlight">Aprendizaje colectivo</span> - Los más avanzados enseñan a los principiantes</li>
+                            <li><span class="highlight">Excelencia musical</span> - Buscamos siempre el más alto nivel artístico</li>
+                        </ul>
+                        <p>Muchos de nuestros estudiantes han formado parte de las orquestas nacionales, llevando el nombre de Ciudad Guayana a todo el país y al mundo.</p>
+                    </div>
+                    <div class="sb-image animate-on-scroll" data-animation="fadeInRight">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Orquesta Sinfónica Simón Bolívar">
+                        <div class="image-caption">Orquesta Sinfónica Simón Bolívar, inspiración para nuestros músicos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de testimonios de la comunidad -->
+        <section class="community-testimonials-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">VOCES DE NUESTRA COMUNIDAD</h2>
+                <div class="testimonials-grid">
+                    <!-- Testimonio 1 -->
+                    <div class="community-testimonial animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>El Sistema cambió la vida de mi hijo por completo. De ser un niño tímido y con problemas de concentración, se ha convertido en un joven seguro y disciplinado gracias a la música.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="person-image">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Foto de María Gómez">
+                            </div>
+                            <div class="person-info">
+                                <div class="person-name">María Gómez</div>
+                                <div class="person-role">Madre de familia</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 2 -->
+                    <div class="community-testimonial animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Como docente, he visto cómo los estudiantes que participan en El Sistema mejoran su rendimiento académico y desarrollan habilidades sociales que les servirán toda la vida.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="person-image">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Foto de Carlos Sánchez">
+                            </div>
+                            <div class="person-info">
+                                <div class="person-name">Carlos Sánchez</div>
+                                <div class="person-role">Profesor de escuela local</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 3 -->
+                    <div class="community-testimonial animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Entré a El Sistema a los 7 años y hoy, a mis 18, puedo decir que la música me salvó. Me dio propósito, amigos y una forma de expresarme que nunca imaginé posible.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="person-image">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Foto de Ana Martínez">
+                            </div>
+                            <div class="person-info">
+                                <div class="person-name">Ana Martínez</div>
+                                <div class="person-role">Estudiante de violín</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 4 -->
+                    <div class="community-testimonial animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Los conciertos de El Sistema han revitalizado nuestra comunidad, trayendo cultura y belleza a espacios que antes estaban abandonados. Es un orgullo para Ciudad Guayana.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-person">
+                            <div class="person-image">
+                                <img src="/placeholder.svg?height=80&width=80" alt="Foto de Roberto Blanco">
+                            </div>
+                            <div class="person-info">
+                                <div class="person-name">Roberto Blanco</div>
+                                <div class="person-role">Líder comunitario</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de galería comunitaria -->
+        <section class="community-gallery-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">GALERÍA COMUNITARIA</h2>
+                <p class="gallery-intro animate-on-scroll" data-animation="fadeIn" data-delay="200">Momentos que capturan el impacto de El Sistema en nuestra comunidad</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="100">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Concierto en plaza pública">
+                        <div class="gallery-caption">Concierto en la Plaza Las Américas</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Taller de lutería comunitario">
+                        <div class="gallery-caption">Taller de lutería comunitario</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="300">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Ensayo con niños de comunidades vulnerables">
+                        <div class="gallery-caption">Ensayo con niños de comunidades vulnerables</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Presentación en hospital local">
+                        <div class="gallery-caption">Presentación en hospital local</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="500">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Clase magistral con maestros internacionales">
+                        <div class="gallery-caption">Clase magistral con maestros internacionales</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Graduación de estudiantes">
+                        <div class="gallery-caption">Graduación de estudiantes</div>
+                    </div>
+                </div>
+                <div class="gallery-cta animate-on-scroll" data-animation="fadeIn" data-delay="700">
+                    <a href="#galeria" class="view-more-btn">VER MÁS FOTOS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de participación comunitaria -->
+        <section class="participation-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">PARTICIPA EN NUESTRA COMUNIDAD</h2>
+                <div class="participation-cards">
+                    <div class="participation-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-music"></i></div>
+                        <h3>Únete como estudiante</h3>
+                        <p>Abrimos inscripciones dos veces al año para niños y jóvenes interesados en aprender música.</p>
+                        <a href="#inscripciones" class="card-link">Más información</a>
+                    </div>
+                    <div class="participation-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Voluntariado</h3>
+                        <p>Necesitamos apoyo en organización de eventos, logística y acompañamiento a los estudiantes.</p>
+                        <a href="#voluntariado" class="card-link">Más información</a>
+                    </div>
+                    <div class="participation-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="card-icon"><i class="fas fa-gift"></i></div>
+                        <h3>Donaciones</h3>
+                        <p>Tu aporte económico o donación de instrumentos hace posible que más niños accedan a la música.</p>
+                        <a href="donaciones.html" class="card-link">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Disfruta de los mejores conciertos de El Sistema Núcleo Ciudad Guayana.
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>ONLINE</h3>
+                        <ul>
+                            <li><a href="galeria-audiovisual.html">Galería audiovisual</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-section animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="sponsors-title">NUESTROS PATROCINADORES</h3>
+                <div class="sponsors-logos">
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 1">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 1">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 2">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 2">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 3">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 3">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 4">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 4">
+                    </a>
+                    <a href="#" class="sponsor-logo" aria-label="Patrocinador 5">
+                        <img src="/placeholder.svg?height=60&width=120" alt="Logo Patrocinador 5">
+                    </a>
+                </div>
+            </div>
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot-button.js"></script>
+</body>
+</html>

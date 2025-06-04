@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar" - El Sistema Ciudad Guayana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="orquesta-regional-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botón de cambio de modo -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Header personalizado para Orquesta Regional -->
+    <header class="page-header-gradient">
+        <div class="container">
+            <!-- Logo que aparece primero -->
+            <img id="page-logo" 
+                 src="../img/Logotema 50 Aniversario El Sistema Ciudad Guayana.PNG" 
+                 alt="Logo 50 Aniversario El Sistema Ciudad Guayana" 
+                 loading="lazy" 
+                 class="page-logo">
+            
+            <!-- Título que aparece después -->
+            <div id="page-title" class="page-title-container">
+                <h1 class="page-title-line1">ORQUESTA REGIONAL "MANUEL CARLOS PIAR"</h1>
+                <p class="page-title-line2">Tradición y excelencia musical regional</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="container">
+            <button class="hamburger-menu" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">INICIO</a><div class="music-notes"></div></li>               
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">CONCIERTOS Y EVENTOS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../calendario.html">CALENDARIO</a></li>
+                        <li><a href="../boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">AGRUPACIONES</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="programa-coral.html">Programa Coral</a></li>
+                        <li><a href="orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">GALERÍA AUDIOVISUAL</a>
+                    <div class="camera-animation"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../galeria/galeria-imagenes.html">GALERÍA DE IMÁGENES</a></li>
+                        <li><a href="../galeria/galeria-videos.html">GALERÍA DE VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">APOYO</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../donaciones.html">DONACIONES</a></li>
+                        <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#agrupaciones" class="dropdown-toggle">SOBRE NOSOTROS</a>
+                    <div class="music-notes"></div>
+                    <ul class="dropdown-menu">
+                        <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu-container" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <button class="close-menu-button" aria-label="Cerrar menú">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        CONCIERTOS Y EVENTOS
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="../calendario.html">CALENDARIO</a></li>
+                        <li><a href="../boletos.html">BOLETOS</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        AGRUPACIONES
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="iniciacion-musical.html">Iniciación Musical</a></li>
+                        <li><a href="alma-llanera.html">Programa Alma Llanera</a></li>
+                        <li><a href="simon-bolivar.html">Programa Simón Bolívar</a></li>
+                        <li><a href="programa-coral.html">Programa Coral</a></li>
+                        <li><a href="orquesta-juvenil.html">Orquesta Sinfónica Juvenil de Ciudad Guayana</a></li>
+                        <li><a href="orquesta-regional.html">Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar"</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        GALERÍA AUDIOVISUAL
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="../galeria/galeria-imagenes.html">GALERÍA DE IMÁGENES</a></li>
+                        <li><a href="../galeria/galeria-videos.html">GALERÍA DE VIDEOS</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        APOYO
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="../donaciones.html">DONACIONES</a></li>
+                        <li><a href="../patrocinadores.html">SÉ UN PATROCINADOR</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <button class="dropdown-toggle">
+                        SOBRE NOSOTROS
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="../quienes-somos.html">QUIÉNES SOMOS</a></li>
+                        <li><a href="../patrocinadores.html">NUESTROS PATROCINADORES</a></li>
+                        <li><a href="../comunidad.html">COMUNIDAD</a></li>
+                        <li><a href="../noticias-prensa.html">NOTICIAS Y PRENSA</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sección de logo y redes sociales -->
+    <section class="branding-section">
+        <div class="container logo-social">
+            <div class="logo-container animate-on-scroll" data-animation="fadeInLeft">
+                <figure class="logo-wrapper">
+                    <img src="../img/logo-molecula.PNG" alt="Logo El Sistema" loading="lazy" class="sistema-logo-img light-mode-logo">
+                    <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy" class="sistema-logo-img dark-mode-logo">
+                </figure>
+                <div class="logo-text">
+                    <p class="bold">EL SISTEMA</p>
+                    <p>Núcleo Ciudad Guayana</p>
+                </div>
+            </div>
+            <div class="social-icons animate-on-scroll" data-animation="fadeInRight" aria-label="Redes sociales">
+                <a href="https://www.instagram.com/elsistemaciudadguayana/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@nucleociudadguayana?si=ApoMP9h69TplhG53" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <main id="contenido-principal">
+        <!-- Sección de introducción -->
+        <section class="program-intro-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="intro-content animate-on-scroll" data-animation="fadeInUp">
+                        <h2 class="section-title">SOBRE LA ORQUESTA</h2>
+                        <p class="intro-description">
+                            La Orquesta Sinfónica Regional Juvenil "Manuel Carlos Piar" representa la máxima expresión 
+                            artística de El Sistema en la región de Guayana. Nombrada en honor al prócer de la independencia, 
+                            esta agrupación reúne a los músicos más destacados de la región, proyectando la excelencia 
+                            musical venezolana tanto a nivel nacional como internacional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de instrumentos por familias -->
+        <section class="instruments-section" id="instrumentos">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">INSTRUMENTOS DE LA ORQUESTA</h2>
+                
+                <!-- Familia de Cuerdas -->
+                <div class="instrument-family strings animate-on-scroll" data-animation="fadeInUp">
+                    <h3 class="family-title">Familia de Cuerdas</h3>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Violín" loading="lazy">
+                                <div class="instrument-placeholder">🎻</div>
+                                <div class="instrument-overlay">
+                                    <h4>Violín</h4>
+                                    <p>El alma de la orquesta con su sonido brillante y expresivo que lidera las melodías principales.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Violín</h4>
+                                <p class="instrument-description">Instrumento líder con sonido brillante y expresivo</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Viola" loading="lazy">
+                                <div class="instrument-placeholder">🎻</div>
+                                <div class="instrument-overlay">
+                                    <h4>Viola</h4>
+                                    <p>Con registro medio cálido, aporta profundidad armónica y une las voces agudas con las graves.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Viola</h4>
+                                <p class="instrument-description">Registro medio cálido que aporta profundidad armónica</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Violonchelo" loading="lazy">
+                                <div class="instrument-placeholder">🎻</div>
+                                <div class="instrument-overlay">
+                                    <h4>Violonchelo</h4>
+                                    <p>Instrumento de registro grave con extraordinaria capacidad expresiva y versatilidad melódica.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Violonchelo</h4>
+                                <p class="instrument-description">Registro grave con gran capacidad expresiva</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Contrabajo" loading="lazy">
+                                <div class="instrument-placeholder">🎻</div>
+                                <div class="instrument-overlay">
+                                    <h4>Contrabajo</h4>
+                                    <p>La base armónica fundamental de la orquesta, proporcionando el soporte grave esencial.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Contrabajo</h4>
+                                <p class="instrument-description">Base armónica con el registro más grave</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Familia de Vientos Madera -->
+                <div class="instrument-family woodwinds animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                    <h3 class="family-title">Vientos Madera</h3>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Flauta" loading="lazy">
+                                <div class="instrument-placeholder">🎵</div>
+                                <div class="instrument-overlay">
+                                    <h4>Flauta</h4>
+                                    <p>Instrumento de sonido cristalino y brillante, perfecto para melodías etéreas en el registro agudo.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Flauta</h4>
+                                <p class="instrument-description">Sonido cristalino y brillante en registro agudo</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Oboe" loading="lazy">
+                                <div class="instrument-placeholder">🎵</div>
+                                <div class="instrument-overlay">
+                                    <h4>Oboe</h4>
+                                    <p>Con timbre penetrante y expresivo, ideal para melodías solistas de gran emotividad.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Oboe</h4>
+                                <p class="instrument-description">Timbre penetrante ideal para melodías solistas</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Clarinete" loading="lazy">
+                                <div class="instrument-placeholder">🎵</div>
+                                <div class="instrument-overlay">
+                                    <h4>Clarinete</h4>
+                                    <p>Versátil instrumento con amplio registro dinámico y gran expresividad tonal.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Clarinete</h4>
+                                <p class="instrument-description">Versátil con amplio registro y gran expresividad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Fagot" loading="lazy">
+                                <div class="instrument-placeholder">🎵</div>
+                                <div class="instrument-overlay">
+                                    <h4>Fagot</h4>
+                                    <p>El bajo de los vientos madera, con sonido cálido y profundo que aporta riqueza armónica.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Fagot</h4>
+                                <p class="instrument-description">Bajo de vientos madera con sonido cálido</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Familia de Vientos Metal -->
+                <div class="instrument-family brass animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                    <h3 class="family-title">Vientos Metal</h3>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Trompeta" loading="lazy">
+                                <div class="instrument-placeholder">🎺</div>
+                                <div class="instrument-overlay">
+                                    <h4>Trompeta</h4>
+                                    <p>Instrumento brillante y heroico, líder indiscutible de la sección de metales.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Trompeta</h4>
+                                <p class="instrument-description">Brillante y heroico, líder de los metales</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Corno Francés" loading="lazy">
+                                <div class="instrument-placeholder">🎺</div>
+                                <div class="instrument-overlay">
+                                    <h4>Corno Francés</h4>
+                                    <p>Con sonido noble y versátil, actúa como puente entre cuerdas y vientos.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Corno Francés</h4>
+                                <p class="instrument-description">Sonido noble que une cuerdas y vientos</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Trombón" loading="lazy">
+                                <div class="instrument-placeholder">🎺</div>
+                                <div class="instrument-overlay">
+                                    <h4>Trombón</h4>
+                                    <p>Instrumento de gran potencia sonora y extraordinaria expresividad dramática.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Trombón</h4>
+                                <p class="instrument-description">Gran potencia y expresividad dramática</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Tuba" loading="lazy">
+                                <div class="instrument-placeholder">🎺</div>
+                                <div class="instrument-overlay">
+                                    <h4>Tuba</h4>
+                                    <p>La base armónica fundamental de los metales con su registro más grave y potente.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Tuba</h4>
+                                <p class="instrument-description">Base armónica de metales en registro grave</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Familia de Percusión -->
+                <div class="instrument-family percussion animate-on-scroll" data-animation="fadeInUp" data-delay="600">
+                    <h3 class="family-title">Percusión</h3>
+                    <div class="instruments-row">
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Timbales" loading="lazy">
+                                <div class="instrument-placeholder">🥁</div>
+                                <div class="instrument-overlay">
+                                    <h4>Timbales</h4>
+                                    <p>Tambores afinados que proporcionan base rítmica y efectos dramáticos espectaculares.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Timbales</h4>
+                                <p class="instrument-description">Tambores afinados con base rítmica y efectos dramáticos</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Xilófono" loading="lazy">
+                                <div class="instrument-placeholder">🎹</div>
+                                <div class="instrument-overlay">
+                                    <h4>Xilófono</h4>
+                                    <p>Instrumento melódico de percusión con sonido brillante, cristalino y penetrante.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Xilófono</h4>
+                                <p class="instrument-description">Percusión melódica con sonido brillante</p>
+                            </div>
+                        </div>
+                        <div class="instrument-card">
+                            <div class="instrument-image">
+                                <img src="/placeholder.svg?height=280&width=400" alt="Platillos" loading="lazy">
+                                <div class="instrument-placeholder">🥁</div>
+                                <div class="instrument-overlay">
+                                    <h4>Platillos</h4>
+                                    <p>Proporcionan acentos dramáticos y efectos especiales de gran impacto sonoro.</p>
+                                </div>
+                            </div>
+                            <div class="instrument-info">
+                                <h4 class="instrument-name">Platillos</h4>
+                                <p class="instrument-description">Acentos dramáticos y efectos especiales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de director -->
+        <section class="director-section" id="director">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">DIRECCIÓN MUSICAL</h2>
+                <div class="director-content">
+                    <div class="director-image animate-on-scroll" data-animation="fadeInLeft">
+                        <div class="director-gradient soft-edge">
+                            <div class="director-overlay">
+                                <i class="fas fa-music director-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="director-info animate-on-scroll" data-animation="fadeInRight">
+                        <h3>Liderazgo Musical de Excelencia</h3>
+                        <p>
+                            Bajo la dirección de maestros experimentados, la Orquesta Regional "Manuel Carlos Piar" 
+                            mantiene los más altos estándares de interpretación musical, representando dignamente 
+                            el legado cultural de la región de Guayana.
+                        </p>
+                        <div class="director-card">
+                            <div class="director-card-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="director-card-info">
+                                <h4>Maestro Director Principal</h4>
+                                <p>Liderando la excelencia musical regional con experiencia internacional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de logros -->
+        <section class="achievements-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">LOGROS Y RECONOCIMIENTOS</h2>
+                <div class="achievements-grid">
+                    <article class="achievement-card animate-on-scroll" data-animation="fadeInUp" data-delay="100">
+                        <div class="card-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Representación Regional</h3>
+                        <p>
+                            Orquesta oficial de la región de Guayana, representando el talento musical 
+                            de los estados Bolívar, Amazonas y Delta Amacuro en eventos nacionales 
+                            e internacionales.
+                        </p>
+                    </article>
+
+                    <article class="achievement-card animate-on-scroll" data-animation="fadeInUp" data-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Proyección Internacional</h3>
+                        <p>
+                            Participación destacada en festivales internacionales, llevando la música 
+                            venezolana y el modelo de El Sistema a escenarios de prestigio mundial.
+                        </p>
+                    </article>
+
+                    <article class="achievement-card animate-on-scroll" data-animation="fadeInUp" data-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formación de Músicos Profesionales</h3>
+                        <p>
+                            Plataforma de desarrollo para músicos que posteriormente integran orquestas 
+                            profesionales nacionales e internacionales, manteniendo vivo el legado 
+                            de El Sistema.
+                        </p>
+                    </article>
+
+                    <article class="achievement-card animate-on-scroll" data-animation="fadeInUp" data-delay="400">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Impacto Social</h3>
+                        <p>
+                            Transformación de vidas a través de la música, promoviendo valores de 
+                            excelencia, disciplina y trabajo en equipo en las comunidades de la región.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-animation="fadeIn">INFORMACIÓN DE CONTACTO</h2>
+                <div class="contact-content animate-on-scroll" data-animation="fadeInUp">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Av. Guayana, Centro Empresarial Centro Alta Vista (Antiguo Maxy's), P.B., Alta Vista, Puerto Ordaz, Municipio Caroní, Ciudad Guayana, Estado Bolívar</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>nucleo.ciudadguayana@elsistema.org.ve</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Integración</h4>
+                                <p>Músicos destacados de la región de Guayana con alto nivel técnico y artístico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-app-section animate-on-scroll" data-animation="fadeIn">
+                    <div class="footer-logo">
+                        <figure class="logo-wrapper">
+                            <img src="../img/logo-nocturno.png" alt="Logo El Sistema (modo oscuro)" loading="lazy">
+                        </figure>
+                        <div class="logo-text-footer">
+                            <p class="bold">EL SISTEMA</p>
+                            <p>Núcleo Ciudad Guayana</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Representando la excelencia musical regional a través de la Orquesta "Manuel Carlos Piar".
+                    </p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="200">
+                        <h3>INSTITUCIÓN</h3>
+                        <ul>
+                            <li><a href="https://elsistema.org.ve/">Descubre El Sistema</a></li>
+                            <li><a href="../quienes-somos.html">Nuestra historia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column animate-on-scroll" data-animation="fadeIn" data-delay="400">
+                        <h3>PROGRAMAS</h3>
+                        <ul>
+                            <li><a href="iniciacion-musical.html">Iniciación Musical</a></li>
+                            <li><a href="alma-llanera.html">Programa Alma Llanera</a></li>
+                            <li><a href="simon-bolivar.html">Programa Simón Bolívar</a></li>
+                            <li><a href="programa-coral.html">Programa Coral</a></li>
+                            <li><a href="orquesta-juvenil.html">Orquesta Juvenil</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-you-are-section animate-on-scroll" data-animation="fadeIn" data-delay="600">
+                    <h3>SOY UN...</h3>
+                    <div class="you-are-buttons">
+                        <a href="#inscripciones" class="you-are-btn">Representante interesado</a>
+                        <a href="#eventos" class="you-are-btn">Organizador de evento</a>
+                        <a href="#patrocinios" class="you-are-btn">Patrocinador</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thank-you animate-on-scroll" data-animation="fadeInUp">
+                <p>GRACIAS POR SU VISITA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Script específico para la animación del header de Orquesta Regional
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.getElementById('page-logo');
+            const title = document.getElementById('page-title');
+            
+            // Mostrar logo primero
+            setTimeout(() => {
+                // Después de 3 segundos, ocultar logo y mostrar título
+                logo.classList.add('fade-out');
+                setTimeout(() => {
+                    title.classList.add('show');
+                }, 500);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
