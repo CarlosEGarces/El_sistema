@@ -166,8 +166,8 @@
           chatbotIframe.getAttribute("src") === "" ||
           chatbotIframe.getAttribute("src") === "about:blank"
         ) {
-          // Usar la ruta absoluta al archivo index-chatbot.html
-          chatbotIframe.setAttribute("src", "/chatbot/index-chatbot.html")
+          // Usar la ruta relativa al archivo index-chatbot.html
+          chatbotIframe.setAttribute("src", "chatbot/index-chatbot.html")
 
           // Verificar si el iframe se cargó correctamente
           chatbotIframe.onload = () => {
@@ -177,7 +177,7 @@
           chatbotIframe.onerror = () => {
             console.error("Error al cargar el iframe")
             // Intentar con una ruta alternativa si hay error
-            chatbotIframe.setAttribute("src", "chatbot/index-chatbot.html")
+            chatbotIframe.setAttribute("src", "/chatbot/index-chatbot.html")
           }
         }
         chatbotModal.style.display = "block"
