@@ -187,7 +187,7 @@ function processUserMessage(userInput, chatBox) {
         case "programs":
           emoji = "🎓"
           botResponseText =
-            "¡Perfecto! El Sistema ofrece varios programas académicos:\n\n" +
+            "¡Perfecto! El Sistema Núcleo Ciudad Guayana ofrece varios programas académicos:\n\n" +
             "📚 **Programa de Iniciación Musical**: Para niños desde los 4 años\n" +
             "🎻 **Orquesta PreInfantil**: Introducción temprana a la música sinfónica\n" +
             "🪕 **Programa Alma Llanera**: Música tradicional venezolana\n" +
@@ -365,9 +365,9 @@ function processUserMessage(userInput, chatBox) {
     emoji = "👋"
     const responses = [
       "¡Hola! Soy Tchaibotsky, tu guía musical. ¿Te gustaría conocer nuestros programas educativos?",
-      "¡Saludos melódicos! ¿Qué información sobre El Sistema puedo ofrecerte? ¿Te interesan nuestras orquestas?",
+      "¡Saludos melódicos! ¿Qué información sobre El Sistema Núcleo Ciudad Guayana puedo ofrecerte? ¿Te interesan nuestras orquestas?",
       "¡Bienvenido al mundo de la música! ¿Qué te gustaría saber sobre nuestros programas?",
-      "¡Hola! Estoy afinado y listo para responder tus preguntas sobre El Sistema. ¿Quieres conocer nuestros eventos?",
+      "¡Hola! Estoy afinado y listo para responder tus preguntas sobre El Sistema Núcleo Ciudad Guayana. ¿Quieres conocer nuestros eventos?",
       "¡Hola! La música es el lenguaje universal. ¿Te gustaría que te ayude con información específica?",
     ]
 
@@ -390,9 +390,9 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "💡"
     botResponseText = randomResponse([
-      "Estoy aquí para ayudarte con información sobre El Sistema. ¿Te gustaría que te explique todos nuestros servicios?",
+      "Estoy aquí para ayudarte con información sobre El Sistema Núcleo Ciudad Guayana. ¿Te gustaría que te explique todos nuestros servicios?",
       "¡Puedo ayudarte con muchas cosas! ¿Quieres que te cuente sobre nuestras orquestas, programas educativos y eventos?",
-      "Mi función es facilitarte información sobre El Sistema. ¿Te interesa conocer todo lo que puedo hacer por ti?",
+      "Mi función es facilitarte información sobre El Sistema Núcleo Ciudad Guayana. ¿Te interesa conocer todo lo que puedo hacer por ti?",
     ])
 
     setQuestionContext("help", "¿Te gustaría que te explique todo lo que puedo hacer?")
@@ -417,7 +417,7 @@ function processUserMessage(userInput, chatBox) {
     emoji = "😊"
     botResponseText = randomResponse([
       "¡De nada! Para mí es un placer compartir la pasión por la música.",
-      "¡No hay de qué! Estoy aquí para hacer que tu experiencia con El Sistema sea perfecta.",
+      "¡No hay de qué! Estoy aquí para hacer que tu experiencia con El Sistema Núcleo Ciudad Guayana sea perfecta.",
       "¡Es un placer! Si tienes más preguntas, no dudes en consultarme.",
       "¡Encantado de ayudar! La música nos une a todos.",
     ])
@@ -429,7 +429,7 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "🎵"
     botResponseText = randomResponse([
-      "¡Estoy en perfecta armonía! Listo para ayudarte con cualquier información sobre El Sistema.",
+      "¡Estoy en perfecta armonía! Listo para ayudarte con cualquier información sobre El Sistema Núcleo Ciudad Guayana.",
       "¡Afinado y a tono! ¿En qué puedo asistirte hoy?",
       "¡Como una sinfonía bien ejecutada! ¿Qué te gustaría saber?",
       "¡En clave de sol! Preparado para resolver todas tus dudas musicales.",
@@ -525,9 +525,9 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "🤖"
     botResponseText = randomResponse([
-      "Soy Tchaibotsky, el asistente virtual de El Sistema. Mi nombre es un guiño al compositor Tchaikovsky, ¡pero yo estoy especializado en responder preguntas, no en componer sinfonías!",
-      "¡Me llamo Tchaibotsky! Soy el asistente virtual de El Sistema, programado para ayudarte con información sobre nuestra organización y eventos. ¡La música es mi pasión digital!",
-      "Soy Tchaibotsky, tu guía virtual en el mundo de El Sistema. Estoy aquí para responder tus preguntas y ayudarte a navegar por nuestra sinfonía de información.",
+      "Soy Tchaibotsky, el asistente virtual de El Sistema Núcleo Ciudad Guayana. Mi nombre es un guiño al compositor Tchaikovsky, ¡pero yo estoy especializado en responder preguntas, no en componer sinfonías!",
+      "¡Me llamo Tchaibotsky! Soy el asistente virtual de El Sistema Núcleo Ciudad Guayana, programado para ayudarte con información sobre nuestra organización y eventos. ¡La música es mi pasión digital!",
+      "Soy Tchaibotsky, tu guía virtual en el mundo de El Sistema Núcleo Ciudad Guayana. Estoy aquí para responder tus preguntas y ayudarte a navegar por nuestra sinfonía de información.",
     ])
   } else if (
     normalizedInput.includes("horario") ||
@@ -561,7 +561,7 @@ function processUserMessage(userInput, chatBox) {
     emoji = "🎹"
     botResponseText = randomResponse([
       "La música es nuestra pasión y razón de ser. Encuentra más información sobre nuestros músicos y su trabajo en la sección 'Comunidad'.",
-      "Nuestros músicos son el alma de El Sistema. Descubre sus historias y trayectorias en la sección 'Comunidad'.",
+      "Nuestros músicos son el alma de El Sistema Núcleo Ciudad Guayana. Descubre sus historias y trayectorias en la sección 'Comunidad'.",
       "¿Te interesa la música o aprender a tocar algún instrumento? En la sección 'Educación' encontrarás información sobre nuestros programas formativos.",
     ])
   } else if (
@@ -573,7 +573,7 @@ function processUserMessage(userInput, chatBox) {
     emoji = "🎭"
     botResponseText = randomResponse([
       "Nuestros espectáculos son experiencias inolvidables. Encuentra toda la información en la sección 'Calendario'. ¡No te los pierdas!",
-      "Cada espectáculo de El Sistema es único y especial. Consulta nuestra programación en la sección 'Calendario'.",
+      "Cada espectáculo de El Sistema Núcleo Ciudad Guayana es único y especial. Consulta nuestra programación en la sección 'Calendario'.",
       "¡Nuestros espectáculos son pura magia musical! Descubre cuándo y dónde en la sección 'Calendario'.",
     ])
   } else if (
@@ -648,7 +648,7 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "🎻"
     botResponseText =
-      "El Sistema cuenta con dos importantes orquestas juveniles:\n\n" +
+      "El Sistema Núcleo Ciudad Guayana cuenta con dos importantes orquestas juveniles:\n\n" +
       "1. Orquesta Sinfónica Juvenil de Ciudad Guayana (Director: Carlos Sanchez)\n" +
       "2. Orquesta Sinfónica Regional Juvenil 'Manuel Carlos Piar' del Estado Bolivar (Director: Gregman Rodriguez Jimenez)\n\n" +
       "¿Sobre cuál de estas orquestas te gustaría obtener más información? Puedes escribir 'orquesta guayana' o 'orquesta piar' para más detalles."
@@ -738,7 +738,7 @@ function processUserMessage(userInput, chatBox) {
     if (normalizedInput.includes("todos") || normalizedInput.includes("lista")) {
       emoji = "📋"
       botResponseText =
-        "El Sistema ofrece los siguientes programas académicos:\n\n" +
+        "El Sistema Núcleo Ciudad Guayana ofrece los siguientes programas académicos:\n\n" +
         "1. Programa de Iniciación Musical\n" +
         "2. Orquesta PreInfantil\n" +
         "3. Programa Alma Llanera\n" +
@@ -749,7 +749,7 @@ function processUserMessage(userInput, chatBox) {
     } else {
       emoji = "🎓"
       botResponseText =
-        "El Sistema ofrece varios programas académicos activos:\n\n" +
+        "El Sistema Núcleo Ciudad Guayana ofrece varios programas académicos activos:\n\n" +
         "1. Programa de Iniciación Musical: Para niños desde los 4 años.\n" +
         "2. Orquesta PreInfantil: Introducción temprana a la música sinfónica.\n" +
         "3. Programa Alma Llanera: Enfocado en música tradicional venezolana.\n" +
@@ -852,7 +852,7 @@ function processUserMessage(userInput, chatBox) {
       ])
     } else {
       botResponseText = randomResponse([
-        "¡Qué pregunta tan interesante! Como asistente virtual, mis 'gustos' están programados para ayudarte con información sobre El Sistema, ¡pero aprecio tu curiosidad!",
+        "¡Qué pregunta tan interesante! Como asistente virtual, mis 'gustos' están programados para ayudarte con información sobre El Sistema Núcleo Ciudad Guayana, ¡pero aprecio tu curiosidad!",
         "Mi 'favorito' es poder ayudarte con información precisa y útil sobre nuestra organización musical.",
         "¡Me 'gusta' responder preguntas sobre música! Es mi especialidad y lo que me hace un chatbot único.",
       ])
@@ -865,9 +865,9 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "🤖"
     botResponseText = randomResponse([
-      "Soy un asistente virtual, creado para ayudarte con información sobre El Sistema. No soy humano, pero estoy programado para ser lo más útil y amigable posible. ¡La música nos une a todos, humanos y bots!",
-      "¡Buena pregunta! Soy Tchaibotsky, un asistente virtual especializado en El Sistema. No tengo sentimientos como los humanos, pero sí tengo mucha información musical para compartir contigo.",
-      "Soy un chatbot musical, programado para asistirte con información sobre El Sistema. No puedo tocar un instrumento (¡aún!), pero puedo ayudarte a encontrar toda la información que necesitas sobre nuestra organización.",
+      "Soy un asistente virtual, creado para ayudarte con información sobre El Sistema Núcleo Ciudad Guayana. No soy humano, pero estoy programado para ser lo más útil y amigable posible. ¡La música nos une a todos, humanos y bots!",
+      "¡Buena pregunta! Soy Tchaibotsky, un asistente virtual especializado en El Sistema Núcleo Ciudad Guayana. No tengo sentimientos como los humanos, pero sí tengo mucha información musical para compartir contigo.",
+      "Soy un chatbot musical, programado para asistirte con información sobre El Sistema Núcleo Ciudad Guayana. No puedo tocar un instrumento (¡aún!), pero puedo ayudarte a encontrar toda la información que necesitas sobre nuestra organización.",
     ])
   } else if (
     normalizedInput.includes("que haces") ||
@@ -876,9 +876,9 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "🎯"
     botResponseText = randomResponse([
-      "¡Mi función es ser tu guía musical en El Sistema! Puedo ayudarte con información sobre nuestros programas, conciertos, orquestas y mucho más. ¡Estoy aquí para que tu experiencia sea armoniosa!",
-      "Soy el asistente virtual de El Sistema, diseñado para responder tus preguntas sobre nuestra organización, eventos y programas educativos. ¡Piensa en mí como tu compañero musical digital!",
-      "¡Sirvo para hacer tu experiencia con El Sistema más fácil y agradable! Puedo proporcionarte información, responder preguntas y guiarte a través de nuestro sitio web. ¡La música es complicada, pero encontrar información sobre ella no debería serlo!",
+      "¡Mi función es ser tu guía musical en El Sistema Núcleo Ciudad Guayana! Puedo ayudarte con información sobre nuestros programas, conciertos, orquestas y mucho más. ¡Estoy aquí para que tu experiencia sea armoniosa!",
+      "Soy el asistente virtual de El Sistema Núcleo Ciudad Guayana, diseñado para responder tus preguntas sobre nuestra organización, eventos y programas educativos. ¡Piensa en mí como tu compañero musical digital!",
+      "¡Sirvo para hacer tu experiencia con El Sistema Núcleo Ciudad Guayana más fácil y agradable! Puedo proporcionarte información, responder preguntas y guiarte a través de nuestro sitio web. ¡La música es complicada, pero encontrar información sobre ella no debería serlo!",
     ])
   } else if (
     normalizedInput.includes("aburrido") ||
@@ -912,7 +912,7 @@ function processUserMessage(userInput, chatBox) {
   ) {
     emoji = "😊"
     botResponseText = randomResponse([
-      "¡Me alegra que estés de buen humor! La música puede potenciar esas emociones positivas. ¿Hay algo específico sobre El Sistema que te gustaría conocer hoy?",
+      "¡Me alegra que estés de buen humor! La música puede potenciar esas emociones positivas. ¿Hay algo específico sobre El Sistema Núcleo Ciudad Guayana que te gustaría conocer hoy?",
       "¡La felicidad y la música van de la mano! ¿Qué mejor momento para explorar nuestros programas o próximos eventos? ¡Tu buen ánimo se multiplicará!",
       "¡Qué bueno escuchar eso! La música es aún más hermosa cuando estamos felices. ¿Te gustaría conocer más sobre nuestras orquestas o programas educativos?",
     ])
